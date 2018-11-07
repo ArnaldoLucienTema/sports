@@ -1,0 +1,447 @@
+<div *ngIf="viewModel"  class="callout meta ">
+<div class="row">
+    <div class="row-left">
+      <div class="team-image">
+        <img [src]="viewModel.avatar" class="old" alt="profile image"
+             title="profile" style="left: -241.5px;">
+      </div>
+      <div class="profile-buttons">
+        <button mat-raised-button class="sc-btn btn-sc-default">Seguir</button>
+      </div>
+
+      <div class="indicators">
+        <div class="text"><strong>{{viewModel.followers.length}}</strong> Seguidores</div>
+        <div class="text"><strong>{{viewModel.recommendations.list.length}}</strong> Recomendações</div>
+      </div>
+
+      <div class="profile-buttons">
+        <button mat-raised-button class="btn-success" (click)="createTeamPlayer()">Criar Atletla</button>
+      </div>
+
+      <div class="roster">
+        <table *ngIf="viewModel.tryouts && viewModel.tryouts.length > 0" class="tryout-table">
+          <caption class="centered caption">
+            Captações
+          </caption>
+          <tbody *ngFor="let tryout of viewModel.tryouts; let idx = index" class="auto-height">
+          <tr class="tr-odd">
+            <td title="Escalão" class="centered first-td">
+              <div class="list_role">Escalão</div>
+            </td>
+            <td class="posrela">
+              {{tryout.age_group}}
+            </td>
+          </tr>
+          <tr class="tr-odd">
+            <td title="Dias" class="centered first-td">
+              <div class="list_role">Dias</div>
+            </td>
+            <td class="posrela">
+              {{tryout.days}}
+            </td>
+          </tr>
+          <tr class="tr-odd">
+            <td title="Horários" class="centered first-td">
+              <div class="list_role">Horários</div>
+            </td>
+            <td class="posrela">
+              {{tryout.time}}
+            </td>
+          </tr>
+          <tr class="tr-odd">
+            <td title="Morada" class="centered first-td">
+              <div class="list_role">Morada</div>
+            </td>
+            <td class="posrela">
+              {{tryout.address}}
+            </td>
+          </tr>
+          <tr class="tr-odd">
+            <td title="Notas" class="centered first-td">
+              <div class="list_role">Notas</div>
+            </td>
+            <td class="posrela">
+              {{tryout.requirements}}
+            </td>
+          </tr>
+          <div *ngIf="idx < viewModel.tryouts.length-1" class="small-border"></div>
+          </tbody>
+        </table>
+        <div class="profile-buttons">
+          <button mat-raised-button class="btn-sc-default" (click)="openTryoutDialog()">Criar Captação</button>
+        </div>
+      </div>
+      <div class="personal">
+        <table class="col-md-12 personal-table">
+          <tbody class="auto-height">
+          <tr>
+            <td class="first-td-padding" title="Presidente">
+              <strong>Presidente</strong>
+            </td>
+            <td class="first-td-padding">
+              {{viewModel.additional_info.president}}
+            </td>
+          </tr>
+          <tr>
+            <td title="V. Presidente">
+              <strong>V. Presidente</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.vice_president}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Diret. Desportivo">
+              <strong>Diret. Desportivo</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.sports_director}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Nº equipas">
+              <strong>Nº equipas</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.number_of_teams}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Nº atletas">
+              <strong>Nº atletas</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.number_of_athletes}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Nº treinadores">
+              <strong>Nº treinadores</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.number_of_coaches}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Nº campos relvado">
+              <strong>Nº campos relvado</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.number_of_grass_fields}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Nº campos sintético">
+              <strong>Nº campos sintético</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.number_of_synthetic_fields}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Patrocinadores">
+              <strong>Patrocinadores</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.sponsors[0]}}
+            </td>
+          </tr>
+          <tr>
+            <td class="last-td-padding" title="Outras modalidades">
+              <strong>Outras modalidades</strong>
+            </td>
+            <td class=" last-td-padding">
+              {{viewModel.additional_info.other_sports}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="col-md-12 personal-table">
+          <tbody class="auto-height">
+          <tr>
+            <td class="first-td-padding" title="Site">
+              <strong>Site</strong>
+            </td>
+            <td class="first-td-padding">
+              {{viewModel.additional_info.site}}
+            </td>
+          </tr>
+          <tr>
+            <td title="E-mail">
+              <strong>E-mail</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.email}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Telefone">
+              <strong>Telefone</strong>
+            </td>
+            <td>
+              {{viewModel.additional_info.phone_number}}
+            </td>
+          </tr>
+          <tr>
+            <td class="last-td-padding" title="Morada">
+              <strong>Morada</strong>
+            </td>
+            <td class="last-td-padding">
+              {{viewModel.additional_info.address}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-center-team">
+      <table class="sc-stats-table">
+        <tbody>
+        <tr class="table_header">
+          <th class="th-td-first">Liga</th>
+          <th>Jogos</th>
+          <th>Class.</th>
+          <th>Vitórias</th>
+          <th>Derrotas</th>
+          <th class="th-td-last">Empates</th>
+        </tr>
+        <tr *ngFor="let stat of viewModel.current_season.standings; let _idx = index "
+            class="{{ _idx % 2 ? 'tr-odd': 'tr-even'  }}">
+          <td>
+            <img class="league" src="{{stat.avatar}}" alt="{{stat.name}}">
+            <div class="player-stats-text">
+            </div>
+          </td>
+          <td>{{stat.matches}}</td>
+          <td>
+            <div *ngIf="stat.position != null">{{stat.position}}º</div>
+            <div *ngIf="stat.position == null">-</div>
+          </td>
+          <td>{{stat.wins}}</td>
+          <td>{{stat.losses}}</td>
+          <td>{{stat.draws}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div  *ngIf="viewModel.current_season.media && viewModel.current_season.media.length > 0" class="sc-media">
+        <div *ngFor="let med of viewModel.current_season.media.slice(0,2)">
+          <div class="callout small articles-big">
+            <div class="video">
+              <iframe width="100%" height="360" src="//www.youtube.com/embed/8Z0sbekoQL4" frameborder="0"
+                      allowfullscreen=""></iframe>
+            </div>
+            <div class="description">
+              <p class="title">
+                <br>
+                <a href="/video/11523/" title="{{med.title}}">{{med.title}}</a>
+                <br>
+                {{med.text}}
+              </p>
+              <div class="authors">
+                <span class="author">{{med.author}}</span></div>
+              <div class="date">{{med.date}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="viewModel.recommendations.top_5 && viewModel.recommendations.top_5.length > 0" class="recommendations">
+        <div class="content">
+          <div class="header">
+            <h3 class="title">Recomendações</h3>
+            <button mat-raised-button (click)="openCreateDialog()" class="btn-recommend">Recomendar {{viewModel.name}}
+            </button>
+          </div>
+          <mat-card class="card-sc"
+                    *ngFor="let recommendation of viewModel.recommendations.top_5.slice(viewModel.recommendations.top_5.length - 5,viewModel.recommendations.top_5.length - 1)">
+            <mat-card-header>
+              <div mat-card-avatar class="profile-small-image"
+                   [ngStyle]="{'background-image':  'url(' + recommendation.author.avatar + ')' }"></div>
+              <mat-card-title class="headers">{{recommendation.author.name}}</mat-card-title>
+              <mat-card-subtitle class="headers">{{recommendation.author.team.name}}
+              </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                {{recommendation.text}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <div class="footer">
+            <button mat-button (click)="openRecommendationsDialog()" class="btn-see-more">Ver mais recomendações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-right">
+      <div class="roster">
+        <table class="roster-table">
+          <thead class="table_header">
+          <tr>
+            <th class="centered">#</th>
+            <th>Jogador</th>
+            <th class="centered">Idade</th>
+            <th class="centered country-col">País</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let player of viewModel.current_season.players" class="tr-odd">
+            <td title="{{player.positions[0]}}" class="centered number_move first-td">
+              <div class="list_number">{{player.number}}</div>
+            </td>
+            <td class="roster-table-list">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2" class="">
+                    <a routerLink="/user-info/{{player.user_info_id}}">
+                      <div mat-card-avatar class="profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + player.avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{player.user_info_id}}">
+                      {{player.name}}
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{player.positions[0]}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">{{player.age}}</td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{player.nationality}}"
+                   alt="{{player.nationality}}" class="list_flag">
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="roster">
+        <table class="roster-table">
+          <thead class="table_header">
+          <tr>
+            <th class="centered">Cargo</th>
+            <th>Técnico</th>
+            <th class="centered">Idade</th>
+            <th class="centered country-col">País</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let staff of viewModel.current_season.staff" class="tr-odd">
+            <td title="{{staff.position}}" class="centered first-td">
+              <div class="list_role">{{staff.position}}</div>
+            </td>
+            <td title="" class="posrela">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2">
+                    <a routerLink="/user-info/{{staff.user_info_id}}">
+                      <div mat-card-avatar class="profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + staff.avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{staff.user_info_id}}">
+                      {{staff.name}}
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">{{staff.age}}</td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{staff.nationality}}"
+                   alt="{{staff.nationality}}" class="list_flag">
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div [hidden]="viewModel" class="loading">
+  <img src="/assets/SP_Logo_Black.png" style="height: 100px; width: auto;">
+  <div class="bars">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>
+  <!--<div style="color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;">
+    Um jogo, um clique, o teu destino.
+  </div>-->
+  <style>
+    .loading {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .loading .bars {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .loading-bar {
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 4px;
+      animation: loading 1s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      background-color: #27ae60;
+      animation-delay: 0;
+    }
+
+    .loading-bar:nth-child(2) {
+      background-color: #f1c40f;
+      animation-delay: 0.09s;
+    }
+
+    .loading-bar:nth-child(3) {
+      background-color: #c0392b;
+      animation-delay: .18s;
+    }
+
+    .loading-bar:nth-child(4) {
+      background-color: #c0392b;
+      animation-delay: .27s;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1, 2.2);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</div>

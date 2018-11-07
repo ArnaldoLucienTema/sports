@@ -1,0 +1,251 @@
+.reg-form {
+  margin: 30px 100px 100px auto;
+  width: 400px;
+  padding: 0 0 24px;
+  border-radius: 2px;
+  background: #EDF0F3;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.reg-form .title {
+  font-family: /* Roman */ -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Lucida Grande, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, /* CJK */ Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, /* Arabic */ Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, /* Thai */ Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, /* Sans Fallbacks */ Droid Sans Fallback, '.SFNSDisplay-Regular', /* CJK Fallbacks */ Heiti SC, Microsoft Yahei;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.9);
+  -webkit-box-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;
+  background: #F6F8FA;
+  text-align: center;
+  padding: 16px 32px 8px 32px;
+  margin: 0;
+}
+
+.reg-form .subtitle {
+  font-family: /* Roman */ -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Lucida Grande, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, /* CJK */ Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, /* Arabic */ Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, /* Thai */ Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, /* Sans Fallbacks */ Droid Sans Fallback, '.SFNSDisplay-Regular', /* CJK Fallbacks */ Heiti SC, Microsoft Yahei;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.9);
+  -webkit-box-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;
+  position: relative;
+  z-index: 1;
+  background: #F6F8FA;
+  text-align: center;
+  padding: 0 8px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  margin: 0;
+}
+
+.reg-alert.hidden {
+  margin-top: -30px;
+}
+
+.reg-alert {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: #fff;
+  margin-bottom: 24px;
+  overflow: hidden;
+  padding: 0 15px;
+  position: relative;
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 0;
+}
+
+.reg-alert>div {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1128px;
+  overflow: hidden;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.reg-alert.hidden>div>p, .main .reg-alert.hidden>div>button {
+  -webkit-transform: translateY(-77px);
+  transform: translateY(-77px);
+  transition-property: transform,-webkit-transform;
+  -webkit-transition-duration: .75s;
+  transition-duration: .75s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.reg-alert>div>p {
+  font-family: /* Roman */ -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Lucida Grande, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, /* CJK */ Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, /* Arabic */ Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, /* Thai */ Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, /* Sans Fallbacks */ Droid Sans Fallback, '.SFNSDisplay-Regular', /* CJK Fallbacks */ Heiti SC, Microsoft Yahei;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+  color: white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  margin: 2px 36px 0 36px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition-property: transform,-webkit-transform;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-delay: .033s;
+  transition-delay: .033s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.reg-alert.hidden>div>button {
+  -webkit-transform: translateY(-77px);
+  transform: translateY(-77px);
+  transition-property: transform,-webkit-transform;
+  -webkit-transition-duration: .75s;
+  transition-duration: .75s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.reg-alert>div>button li-icon {
+  top: calc(50% + 4px);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 16px;
+  left: calc(50% + 4px);
+  margin: -12px 0 0 -12px;
+  padding: 0;
+  position: absolute;
+  width: 16px;
+}
+
+.reg-alert .message {
+  margin-right: 0;
+}
+
+.reg-form .form-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 0 24px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.reg-form label:first-of-type {
+  margin-top: 16px;
+}
+
+.reg-form label {
+  margin: 8px 0 4px;
+}
+
+.reg-form label, .main .reg-form input {
+  font-family: /* Roman */ -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Lucida Grande, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, /* CJK */ Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, /* Arabic */ Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, /* Thai */ Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, /* Sans Fallbacks */ Droid Sans Fallback, '.SFNSDisplay-Regular', /* CJK Fallbacks */ Heiti SC, Microsoft Yahei;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.9);
+  -webkit-box-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;
+  min-width: 0;
+}
+
+.reg-form input[type="text"], .main .reg-form input[type="password"] {
+  padding: 0 8px;
+}
+
+.reg-form input {
+  height: 32px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+.reg-form .agreement {
+  font-family: /* Roman */ -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Lucida Grande, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, /* CJK */ Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, /* Arabic */ Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, /* Thai */ Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, /* Sans Fallbacks */ Droid Sans Fallback, '.SFNSDisplay-Regular', /* CJK Fallbacks */ Heiti SC, Microsoft Yahei;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.6);
+  text-align: center;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.reg-form input[type="submit"] {
+  background-color: #0073b1;
+  border: 0;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: inherit;
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+  outline-width: 2px;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition-duration: 167ms;
+  transition-duration: 167ms;
+  -webkit-transition-property: background-color,color,-webkit-box-shadow;
+  transition-property: background-color,color,-webkit-box-shadow;
+  transition-property: background-color,box-shadow,color;
+  transition-property: background-color,box-shadow,color,-webkit-box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  vertical-align: middle;
+  z-index: 0;
+  font-family: /* Roman */ -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Lucida Grande, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, /* CJK */ Hiragino Kaku Gothic Pro, Meiryo, Hiragino Sans GB W3, /* Arabic */ Noto Naskh Arabic, Droid Arabic Naskh, Geeza Pro, Simplified Arabic, /* Thai */ Noto Sans Thai, Thonburi, Dokchampa, Droid Sans Thai, /* Sans Fallbacks */ Droid Sans Fallback, '.SFNSDisplay-Regular', /* CJK Fallbacks */ Heiti SC, Microsoft Yahei;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: white;
+  font-weight: 500;
+}
+
+.home{
+  overflow: hidden;
+  background-image: url(/assets/soccer-court.jpg);
+  background-repeat: initial;
+  background-size: auto;
+}

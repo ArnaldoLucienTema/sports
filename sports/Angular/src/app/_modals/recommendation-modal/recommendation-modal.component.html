@@ -1,0 +1,43 @@
+<h2 *ngIf="create">Faz uma recomendação</h2>
+<h2 *ngIf="!create && edit">Edita a tua recomendação</h2>
+<div class="creation-modal">
+  <div class="creation-modal__modal-header">
+    <span>Criar Recomendação</span>
+    <mat-icon (click)="onNoClick()">
+      highlight_off
+    </mat-icon>
+  </div>
+  <div class="creation-modal__modal-description">
+    <img [src]="player.current_season.personal_info.avatar">
+    <div class="author-info">
+      <h4>{{player.current_season.personal_info.name}}</h4>
+      <h5>Primeira Liga Portuguesa</h5>
+    </div>
+  </div>
+  <div class="creation-modal__modal-form">
+    <mat-form-field class="col-sm-12">
+      <mat-select [(ngModel)]="relationship" [placeholder]="'Relação com este utilizador'">
+        <mat-option value="Adepto">
+          Adepto
+        </mat-option>
+        <mat-option value="Jogador">
+          Jogador
+        </mat-option>
+        <mat-option value="Sócio">
+          Sócio
+        </mat-option>
+        <mat-option value="Treinador">
+          Treinador
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-sm-12">
+        <textarea matInput placeholder="Faz uma recomendação" matTextareaAutosize matAutosizeMinRows="3"
+                  [(ngModel)]="text" ></textarea>
+    </mat-form-field>
+  </div>
+  <div class="creation-modal__buttons">
+    <button mat-raised-button (click)="onCreateClick()">Confirmar</button>
+    <button mat-button (click)="onNoClick()" mat-button>Cancelar</button>
+  </div>
+</div>

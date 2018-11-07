@@ -1,0 +1,133 @@
+.result-info{
+  margin: 20px auto;
+  display: table;
+  float: none;
+}
+
+.result-info .game-info{
+  display: table;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.result-info .game-info .info{
+  font-size: small;
+}
+
+.result-info .game-info .date{
+  font-size: initial;
+  font-weight: initial;
+}
+
+
+.match-competition{
+  text-align: center;
+  font-size: xx-large;
+  display: table;
+  margin: 0 auto;
+}
+
+.match-competition img{
+  height: 150px;
+  width: auto;
+}
+
+.match-team-info{
+  margin: 0 90px;
+}
+
+.referee{
+  margin: 0 90px;
+  text-align: center;
+}
+
+.match-team-info .result{
+  font-weight: bold;
+  font-size: xx-large;
+  margin: 0;
+  text-align: center;
+}
+
+
+.match-team-info a{
+  font-size: large;
+}
+
+.match-team-info img{
+  height: 75px;
+  width: auto;
+}
+
+.match-team-info .home-team{
+  text-align: right;
+}
+
+.match-team-info .home-team table{
+  float: right;
+}
+
+.match-team-info .away-team{
+  text-align: left;
+}
+
+.match-team-info .away-team img{
+  float: right;
+}
+
+.match-team-info .home-team .team-goals{
+  font-size: 8px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.match-team-info .away-team .team-goals{
+  font-size: 8px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.match{
+  overflow: hidden;
+  margin: 0 auto;
+  width: 1128px;
+}
+
+.match .home-row{
+  float: left;
+}
+
+.match .away-row{
+  float: right;
+}
+
+.match .center{
+  margin: 0 auto;
+}
+
+.achievements{
+  margin: 30px 0;
+}
+
+
+.table_header {
+  color: #032f4f;
+  background-color: white;
+}
+
+.table_header tr{
+  height: 50px !important;
+}
+
+.table_header td, th {
+  height: auto !important;
+}
+
+.icon {
+  width: auto !important;
+  height: 15px !important;
+}
+
+.tr-odd {
+  background-color: white;
+  height: 100px !important;
+}

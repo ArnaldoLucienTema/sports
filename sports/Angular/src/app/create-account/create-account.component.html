@@ -1,0 +1,52 @@
+<div class="row-center-stats centered">
+
+  <div *ngIf="leagues != null">
+    <h1>Escolhe a tua competição</h1>
+    <mat-form-field>
+      <mat-select [(ngModel)]="chosenLeague" (change)="loadTeam()" placeholder="Competição">
+        <mat-option *ngFor="let league of leagues" [value]="league">{{league.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="teams != null">
+    <h1>Escolhe a tua equipa</h1>
+    <mat-form-field>
+      <mat-select [(ngModel)]="chosenTeam" (change)="loadPlayersByTeam()" placeholder="Equipa">
+        <mat-option *ngFor="let team of teams" [value]="team">
+          {{team.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+  <div *ngIf="players != null">
+    <h1>Quem és?</h1>
+    <mat-form-field>
+      <mat-select [(ngModel)]="chosenPlayer" (change)="createPlayer()" placeholder="Jogador">
+        <mat-option *ngFor="let player of players" [value]="player">
+          {{player.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div *ngIf="chosenPlayer != null">
+
+    <button mat-raised-button (click)="loadPlayer()" class="sc-btn btn-start">INICIAR</button>
+
+
+
+    <section class="form-body">
+    <span class="agreement">
+      Não te encontras na lista?
+      <br>
+      Certifica-te que escolheste a competição e equipa correta.
+      <br>
+      Se ainda assim não estás na lista,
+      <a href="#">cria um novo jogador.</a>
+    </span>
+    </section>
+  </div>
+</div>

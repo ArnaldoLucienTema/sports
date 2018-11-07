@@ -1,0 +1,33 @@
+<div class="home">
+  <form class="reg-form">
+    <h2 class="title">Mostra o teu valor!</h2>
+    <h3 class="subtitle">Experimenta gratuitamente.</h3>
+    <div class="reg-alert hidden" role="alert" tabindex="-1">
+      <div class="wrapper">
+        <p class="message">
+          <span class="alert-content"></span>
+        </p>
+        <button class="dismiss dismiss-alert"></button>
+      </div>
+    </div>
+    <section class="form-body">
+      <label for="reg-firstname">Nome</label>
+      <input type="text" name="firstName" id="reg-firstname" class="col-md-12 reg-firstname" aria-required="true"
+             tabindex="1" placeholder="" >
+      <label for="reg-email">Email</label>
+      <input type="text" name="session_key" class="reg-email col-md-12 " autocapitalize="off" tabindex="1"
+             id="reg-email" autofocus="autofocus" [(ngModel)]="email">
+      <label for="reg-password">Palavra-passe (mínimo de 8 caracteres)</label>
+      <input type="password" name="session_password" class="col-md-12 reg-password" id="reg-password"
+             aria-required="true" tabindex="1" autocomplete="new-password" [(ngModel)]="password">
+      <span class="agreement">
+      Ao clicar em "Criar conta", está a concordar com os
+      <a tabindex="4" href="https://www.linkedin.com/legal/user-agreement"> Termos e Condições</a>
+      , <a tabindex="4" href="https://www.linkedin.com/legal/privacy-policy">Política de privacidade</a>
+      e
+      <a tabindex="4" href="https://www.linkedin.com/legal/cookie-policy">Política de Cookies</a> da SportsConnected.
+      </span>
+      <input tabindex="4" id="registration-submit" (click)="createAccount()" class="registration submit-button" type="submit" value="Criar conta">
+    </section>
+  </form>
+</div>

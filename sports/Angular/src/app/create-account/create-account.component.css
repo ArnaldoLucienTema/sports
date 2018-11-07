@@ -1,0 +1,44 @@
+.form-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 0 24px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.agreement{
+  margin: 30px auto;
+}
+
+.search_item{
+  color: black;
+  display: flex;
+  height: 60px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px;
+  border-color: darkgray;
+  width: 95%;
+}
+
+.search_item img{
+  height: 50px;
+}
+
+.search_item .search-info{
+  margin-left: 10px;
+}
+
+mat-select {
+  text-align: center;
+}

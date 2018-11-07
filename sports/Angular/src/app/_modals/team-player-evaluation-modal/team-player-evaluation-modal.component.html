@@ -1,0 +1,75 @@
+<div class="creation-modal">
+  <div class="creation-modal__modal-header">
+    <span>Avaliação Avançada (Ainda por implementar...)</span>
+    <mat-icon (click)="onNoClick()">
+      highlight_off
+    </mat-icon>
+  </div>
+
+
+  <table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th>Técnico</th>
+      <th>Tático</th>
+      <th>Físico</th>
+      <th>Mental</th>
+      <th>Data</th>
+      <th>Jogo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let field of fieldArray; let i = index">
+      <td>
+        <input [(ngModel)]="field.technical" class="form-control" type="text" name="{{field.technical}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="field.tactical" class="form-control" type="text" name="{{field.tactical}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="field.physical" class="form-control" type="text" name="{{field.physical}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="field.mental" class="form-control" type="text" name="{{field.mental}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="field.date" class="form-control" type="text" name="{{field.date}}" />
+      </td>
+      <td>
+        <input [(ngModel)]="field.game" class="form-control" type="text" name="{{field.game}}" />
+      </td>
+      <td>
+        <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Remover</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input class="form-control" type="text" id="newAttributeTechnical" [(ngModel)]="newAttribute.technical" name="newAttributeTechnical" />
+      </td>
+      <td>
+        <input class="form-control" type="text" id="newAttributeTactical" [(ngModel)]="newAttribute.tactical" name="newAttributeTactical" />
+      </td>
+      <td>
+        <input class="form-control" type="text" id="newAttributePhysical" [(ngModel)]="newAttribute.physical" name="newAttributePhysical" />
+      </td>
+      <td>
+        <input class="form-control" type="text" id="newAttributeMental" [(ngModel)]="newAttribute.mental" name="newAttributeMental" />
+      </td>
+      <td>
+        <input class="form-control" type="text" id="newAttributeDate" [(ngModel)]="newAttribute.date" name="newAttributeDate" />
+      </td>
+      <td>
+        <input class="form-control" type="text" id="newAttributeGame" [(ngModel)]="newAttribute.game" name="newAttributeGame" />
+      </td>
+      <td>
+        <button class="btn btn-default" type="button" (click)="addFieldValue()">Adicionar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="creation-modal__buttons">
+    <button mat-raised-button (click)="onCreateClick()">Confirmar</button>
+    <button mat-button (click)="onNoClick()" mat-button>Cancelar</button>
+  </div>
+</div>

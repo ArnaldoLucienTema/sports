@@ -1,0 +1,989 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Players Net documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Players Net documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TeamMediaComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/team-media/team-media.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-team-media</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>team-media.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./team-media.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                <a href="#sortedData">sortedData</a>
+                            </li>
+                            <li>
+                                <a href="#viewModel">viewModel</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#sortData">sortData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(teamService: <a href="../injectables/TeamService.html">TeamService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/team-media/team-media.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>teamService</td>
+
+                                                        <td>
+                                                                    <code><a href="../injectables/TeamService.html" target="_self" >TeamService</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/team-media/team-media.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortData"></a>
+                        <span class="name">
+                            <b>
+                            sortData
+                            </b>
+                            <a href="#sortData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>sortData(sort: Sort)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="314" class="link-to-prism">src/app/team-media/team-media.component.ts:314</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>sort</td>
+                                                        <td>
+                                                                    <code>Sort</code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <span class="name">
+                            <b>
+                            id
+                            </b>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>id:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/team-media/team-media.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortedData"></a>
+                        <span class="name">
+                            <b>
+                            sortedData
+                            </b>
+                            <a href="#sortedData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>sortedData:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/team-media/team-media.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewModel"></a>
+                        <span class="name">
+                            <b>
+                            viewModel
+                            </b>
+                            <a href="#viewModel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>viewModel:     <code><a href="../classes/TeamViewModel.html" target="_self" >TeamViewModel</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TeamViewModel.html" target="_self" >TeamViewModel</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/team-media/team-media.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {AfterViewInit, Component, OnInit} from &#x27;@angular/core&#x27;;
+import {ActivatedRoute} from &quot;@angular/router&quot;;
+import {TeamViewModel} from &quot;../_models/team_viewmodel&quot;;
+import {TeamService} from &quot;../_services/team.service&quot;;
+import {Sort} from &quot;@angular/material&quot;;
+
+@Component({
+  selector: &#x27;app-team-media&#x27;,
+  templateUrl: &#x27;./team-media.component.html&#x27;,
+  styleUrls: [&#x27;./team-media.component.css&#x27;]
+})
+export class TeamMediaComponent implements OnInit {
+
+  viewModel: TeamViewModel;
+  sortedData;
+  id;
+  constructor(private teamService : TeamService, private route: ActivatedRoute) {}
+
+  ngOnInit() {
+
+    this.id  &#x3D; this.route.snapshot.paramMap.get(&#x27;id&#x27;);
+    this.teamService.getTeam(this.id)
+      .subscribe(team &#x3D;&gt; {
+
+        //Convert player&#x27;s birth_date to age
+        team.current_season.players.forEach((player) &#x3D;&gt; {
+          if (!player[&#x27;date_of_birth&#x27;]) player[&#x27;date_of_birth&#x27;] &#x3D; &#x27;1996-05-20T00:00:00.000Z&#x27;;
+          let birth_date &#x3D; new Date(player[&#x27;date_of_birth&#x27;]);
+          let ageDifMs &#x3D; Date.now() - birth_date.getTime();
+          let ageDate &#x3D; new Date(ageDifMs);
+          player[&#x27;age&#x27;] &#x3D; Math.abs(ageDate.getUTCFullYear() - 1970);
+        });
+
+        //Convert staff&#x27;s birth_date to age
+        team.current_season.staff.forEach((staff) &#x3D;&gt; {
+          if (!staff[&#x27;date_of_birth&#x27;]) staff[&#x27;date_of_birth&#x27;] &#x3D; &#x27;1979-05-20T00:00:00.000Z&#x27;;
+          let birth_date &#x3D; new Date(staff[&#x27;date_of_birth&#x27;]);
+          let ageDifMs &#x3D; Date.now() - birth_date.getTime();
+          let ageDate &#x3D; new Date(ageDifMs);
+          staff[&#x27;age&#x27;] &#x3D; Math.abs(ageDate.getUTCFullYear() - 1970);
+        });
+
+        //Convert player&#x27;s name to short name and position standardisation
+        team.current_season.players.forEach((player) &#x3D;&gt; {
+          if (player.name.split(&#x27; &#x27;).length &gt; 2) {
+            player.name &#x3D; player.name.split(&#x27; &#x27;)[0] + &#x27; &#x27; + player.name.split(&#x27; &#x27;)[player.name.split(&#x27; &#x27;).length - 1];
+          }
+
+          let position &#x3D; player.positions[0];
+          let parenthesis_idx &#x3D; position.indexOf(&#x27;(&#x27;);
+          if (parenthesis_idx &gt; 0) {
+            player.positions[0] &#x3D; position.substring(
+              position.indexOf(&quot;(&quot;) + 1,
+              position.lastIndexOf(&quot;)&quot;)
+            );
+          }
+        });
+
+
+        team.current_season.media&#x3D; [
+          {
+            title: team.name + &#x27; marca Hat-trick em jogo decisivo&#x27;,
+            author: &#x27;A Bola.&#x27;,
+            date: &#x27;08-05-2018&#x27;,
+            image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+            ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+            views: 53,
+            shares: 8,
+            likes: 20,
+            text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+            references: {
+              leagues: [
+                {
+                  name: &#x27;Liga Portugal&#x27;,
+                  id: &#x27;1&#x27;,
+                }
+              ],
+              team: [{
+                name: &#x27;Seixal FC&#x27;,
+                id: &#x27;1&#x27;
+              }],
+              player: [{
+                name: team.name,
+                id: &#x27;1&#x27;
+              }],
+            }
+          },
+          {
+            title: team.name + &#x27; faz 25 anos!&#x27;,
+            author: &#x27;A Bola.&#x27;,
+            date: &#x27;27-08-2018&#x27;,
+            image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+            ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+            views: 1200,
+            shares: 12,
+            likes: 0,
+            text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci.&#x27;,
+            references: {
+              leagues: [
+                {
+                  name: &#x27;Liga Portugal&#x27;,
+                  id: &#x27;1&#x27;,
+                }
+              ],
+              team: [{
+                name: &#x27;Seixal FC&#x27;,
+                id: &#x27;1&#x27;
+              }],
+              player: [{
+                name: team.name,
+                id: &#x27;1&#x27;
+              }],
+            }
+          },
+          {
+            title: &#x27;Melhores momentos&#x27;,
+            author: &#x27;A Bola.&#x27;,
+            date: &#x27;08-09-2018&#x27;,
+            image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+            ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+            views: 93,
+            shares: 45,
+            likes: 90,
+            text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+            references: {
+              leagues: [
+                {
+                  name: &#x27;Liga Portugal&#x27;,
+                  id: &#x27;1&#x27;,
+                }
+              ],
+              team: [{
+                name: &#x27;Seixal FC&#x27;,
+                id: &#x27;1&#x27;
+              }],
+              player: [{
+                name: &#x27;Arnaldo Tema&#x27;,
+                id: &#x27;1&#x27;
+              }],
+            }
+          },
+          {
+            title: &#x27;15 Golos em 10 jogos.&#x27;,
+            author: &#x27;A Bola.&#x27;,
+            date: &#x27;03-11-2018&#x27;,
+            image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+            ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+            views: 200,
+            shares: 12,
+            likes: 20,
+            text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+            references: {
+              leagues: [
+                {
+                  name: &#x27;Liga Portugal&#x27;,
+                  id: &#x27;1&#x27;,
+                }
+              ],
+              team: [{
+                name: &#x27;Seixal FC&#x27;,
+                id: &#x27;1&#x27;
+              }],
+              player: [{
+                name: &#x27;Arnaldo Tema&#x27;,
+                id: &#x27;1&#x27;
+              }],
+            }
+          },
+          {
+            title: &#x27;Campeão da Supermacia&#x27;,
+            author: &#x27;A Bola.&#x27;,
+            date: &#x27;08-02-2018&#x27;,
+            image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+            ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+            views: 2,
+            shares: 0,
+            likes: 0,
+            text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+            references: {
+              leagues: [
+                {
+                  name: &#x27;Liga Portugal&#x27;,
+                  id: &#x27;1&#x27;,
+                }
+              ],
+              team: [{
+                name: &#x27;Seixal FC&#x27;,
+                id: &#x27;1&#x27;
+              }],
+              player: [{
+                name: &#x27;Arnaldo Tema&#x27;,
+                id: &#x27;1&#x27;
+              }],
+            }
+          },
+          {
+            title: team.name + &#x27; falha final da Taça de Portugal&#x27;,
+            author: &#x27;A Bola.&#x27;,
+            date: &#x27;28-05-2018&#x27;,
+            image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+            ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+            views: 40,
+            shares: 40,
+            likes: 13,
+            text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+            references: {
+              leagues: [
+                {
+                  name: &#x27;Liga Portugal&#x27;,
+                  id: &#x27;1&#x27;,
+                }
+              ],
+              team: [{
+                name: &#x27;Seixal FC&#x27;,
+                id: &#x27;1&#x27;
+              }],
+              player: [{
+                name: &#x27;Arnaldo Tema&#x27;,
+                id: &#x27;1&#x27;
+              }],
+            }
+          }
+        ];
+
+        // Inserting some recommendations for the same reason.
+
+        team.recommendations &#x3D; {
+          list: [1, 2, 3],
+          top_5: [
+            {
+              author: {
+                name: &#x27;Arnaldo Tema&#x27;,
+                relationship: &#x27;Colega de equipa&#x27;,
+                id: &#x27;2&#x27;,
+                avatar: &#x27;https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/13781724_10205190140152111_6495749405499267870_n.jpg?_nc_cat=106&oh=c66e24c7f9b1ce391584fa0400b9414b&oe=5C545952&#x27;,
+                team: {
+                  id: &#x27;1&#x27;,
+                  acronym: &#x27;SFC&#x27;,
+                  avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+                  name: &#x27;Seixal FC&#x27;,
+                },
+              },
+              text: &#x27;Sed imperdiet tellus tristique, porttitor velit condimentum, bibendum augue. Maecenas sit amet libero et urna consequat ultrices ut sit amet nulla. Mauris quis neque ut lacus elementum tempus.&#x27;,
+            },
+            {
+              author: {
+                name: &#x27;Nuno Carmo&#x27;,
+                relationship: &#x27;Treinador&#x27;,
+                id: &#x27;3&#x27;,
+                avatar: &#x27;https://scontent.fopo3-1.fna.fbcdn.net/v/t31.0-8/15541052_10212069863200855_2889012374229061166_o.jpg?_nc_cat&#x3D;0&amp;oh&#x3D;5b128be1ebf4151ec5aa2afb671b72d0&amp;oe&#x3D;5B8C9375&#x27;,
+                team: {
+                  id: &#x27;1&#x27;,
+                  acronym: &#x27;SFC&#x27;,
+                  avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+                  name: &#x27;Seixal FC&#x27;,
+                },
+              },
+              text: &#x27;Maecenas tortor elit, fermentum non aliquam quis, bibendum nec urna. Cras euismod justo nec nisl ullamcorper, eget gravida tellus tincidunt. Aliquam quis leo ligula.&#x27;,
+            },
+            {
+              author: {
+                name: &#x27;Vital de Carvalho&#x27;,
+                relationship: &#x27;Treinador&#x27;,
+                id: &#x27;4&#x27;,
+                avatar: &#x27;https://openminds.swissre.com/static//images/profile-default.png&#x27;,
+                team: {
+                  id: &#x27;1&#x27;,
+                  acronym: &#x27;SFC&#x27;,
+                  avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+                  name: &#x27;Seixal FC&#x27;,
+                },
+              },
+              text: &#x27;Duis eu maximus nibh, in consequat dui. Suspendisse porttitor elit et turpis faucibus volutpat. Nunc et mi luctus, vehicula eros team_id, tincidunt ante.&#x27;,
+            },
+            {
+              author: {
+                name: &#x27;José Mourinho&#x27;,
+                relationship: &#x27;Treinador&#x27;,
+                id: &#x27;5&#x27;,
+                avatar: &#x27;https://cdn.images.dailystar.co.uk/dynamic/58/photos/763000/620x/Jose-Mourinho-644644.jpg&#x27;,
+                team: {
+                  id: &#x27;1&#x27;,
+                  acronym: &#x27;SFC&#x27;,
+                  avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+                  name: &#x27;Seixal FC&#x27;,
+                },
+              },
+              text: &#x27;Cras vehicula diam team_id massa tempus sodales. Mauris gravida nunc sed pulvinar ornare. Quisque eu pulvinar augue. Curabitur a rutrum metus. Nam mattis, quam ut varius suscipit, lacus lorem sodales diam, ac fermentum quam nulla a orci. Aenean team_id tincidunt ex, sit amet commodo ligula. Nulla dui mi, consectetur sit amet justo sed, aliquam dictum mi. Aenean sit amet cursus enim.&#x27;,
+            },
+            {
+              author: {
+                name: &#x27;Jorge Jesus&#x27;,
+                relationship: &#x27;Treinador&#x27;,
+                id: &#x27;6&#x27;,
+                avatar: &#x27;https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Jorge_Jesus.jpg/1200px-Jorge_Jesus.jpg&#x27;,
+                team: {
+                  id: &#x27;1&#x27;,
+                  acronym: &#x27;SFC&#x27;,
+                  avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+                  name: &#x27;Seixal FC&#x27;,
+                },
+              },
+              text: &#x27;Nunc interdum, mauris ut pharetra elementum, mauris nunc blandit augue, nec semper arcu risus ac orci. Curabitur sit amet mauris vel erat faucibus fringilla in vel ligula.&#x27;,
+            }
+          ],
+        };
+
+
+        this.sortedData &#x3D; team.current_season.media.slice();
+        return this.viewModel &#x3D; team;
+      });
+  }
+
+  sortData(sort: Sort) {
+    if(!this.viewModel.current_season.media){
+      return;
+    }
+    const data &#x3D; this.viewModel.current_season.media.slice();
+    if (!sort.active || sort.direction &#x3D;&#x3D; &#x27;&#x27;) {
+      this.sortedData &#x3D; data;
+      return;
+    }
+
+    this.sortedData &#x3D; data.sort((a, b) &#x3D;&gt; {
+      let isAsc &#x3D; sort.direction &#x3D;&#x3D; &#x27;asc&#x27;;
+      switch (sort.active) {
+        case &#x27;Popular&#x27;: return compare(+a.views, +b.views, isAsc);
+        case &#x27;Recente&#x27;: return compare(a.date, b.date, isAsc);
+        case &#x27;Gostos&#x27;: return compare(+a.likes, +b.likes, isAsc);
+        default: return 0;
+      }
+    });
+  }
+
+}
+
+function compare(a, b, isAsc) {
+  return (a &lt; b ? -1 : 1) * (isAsc ? 1 : -1);
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;viewModel&quot; class&#x3D;&quot;inner-page player&quot;&gt;
+
+  &lt;table class&#x3D;&quot;table-order-center&quot; matSort (matSortChange)&#x3D;&quot;sortData($event)&quot;&gt;
+    &lt;tr&gt;
+      &lt;th mat-sort-header&#x3D;&quot;Recente&quot;&gt;Recente&lt;/th&gt;
+      &lt;th mat-sort-header&#x3D;&quot;Popular&quot;&gt;Popular&lt;/th&gt;
+      &lt;th mat-sort-header&#x3D;&quot;Gostos&quot;&gt;Gostos&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;div class&#x3D;&quot;col-md-6 col-xs-12 column &quot; *ngFor&#x3D;&quot;let med of sortedData&quot;&gt;
+    &lt;div class&#x3D;&quot;callout small articles-big&quot;&gt;
+      &lt;div class&#x3D;&quot;video&quot;&gt;
+        &lt;iframe width&#x3D;&quot;100%&quot; height&#x3D;&quot;360&quot; src&#x3D;&quot;//www.youtube.com/embed/8Z0sbekoQL4&quot; frameborder&#x3D;&quot;0&quot;
+                allowfullscreen&#x3D;&quot;&quot;&gt;&lt;/iframe&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;description&quot;&gt;
+        &lt;p class&#x3D;&quot;title&quot;&gt;
+          &lt;br&gt;
+          &lt;a href&#x3D;&quot;/video/11523/&quot; title&#x3D;&quot;{{med.title}}&quot;&gt;{{med.title}}&lt;/a&gt;
+          &lt;br&gt;
+          {{med.text}}
+        &lt;/p&gt;
+        &lt;div class&#x3D;&quot;authors&quot;&gt;
+          &lt;span class&#x3D;&quot;author&quot;&gt;{{med.author}}&lt;/span&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;date&quot;&gt;{{med.date}}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div [hidden]&#x3D;&quot;viewModel&quot; class&#x3D;&quot;loading&quot;&gt;
+  &lt;img src&#x3D;&quot;/assets/ball.png&quot; style&#x3D;&quot;height: 100px; width: auto;&quot;&gt;
+  &lt;div class&#x3D;&quot;bars&quot;&gt;
+    &lt;div class&#x3D;&quot;loading-bar&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;loading-bar&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;loading-bar&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;loading-bar&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!--&lt;div style&#x3D;&quot;color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;&quot;&gt;
+    Um jogo, um clique, o teu destino.
+  &lt;/div&gt;--&gt;
+  &lt;style&gt;
+    .loading {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .loading .bars {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .loading-bar {
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 4px;
+      animation: loading 1s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      background-color: #27ae60;
+      animation-delay: 0;
+    }
+
+    .loading-bar:nth-child(2) {
+      background-color: #f1c40f;
+      animation-delay: 0.09s;
+    }
+
+    .loading-bar:nth-child(3) {
+      background-color: #c0392b;
+      animation-delay: .18s;
+    }
+
+    .loading-bar:nth-child(4) {
+      background-color: #c0392b;
+      animation-delay: .27s;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1, 2.2);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+  &lt;/style&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="viewModel" class="inner-page player">  <table class="table-order-center" matSort (matSortChange)="sortData($event)">    <tr>      <th mat-sort-header="Recente">Recente</th>      <th mat-sort-header="Popular">Popular</th>      <th mat-sort-header="Gostos">Gostos</th>    </tr>  </table>  <div class="col-md-6 col-xs-12 column " *ngFor="let med of sortedData">    <div class="callout small articles-big">      <div class="video">        <iframe width="100%" height="360" src="//www.youtube.com/embed/8Z0sbekoQL4" frameborder="0"                allowfullscreen=""></iframe>      </div>      <div class="description">        <p class="title">          <br>          <a href="/video/11523/" title="{{med.title}}">{{med.title}}</a>          <br>          {{med.text}}        </p>        <div class="authors">          <span class="author">{{med.author}}</span></div>        <div class="date">{{med.date}}</div>      </div>    </div>  </div></div><div [hidden]="viewModel" class="loading">  <img src="/assets/ball.png" style="height: 100px; width: auto;">  <div class="bars">    <div class="loading-bar"></div>    <div class="loading-bar"></div>    <div class="loading-bar"></div>    <div class="loading-bar"></div>  </div>  <!--<div style="color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;">    Um jogo, um clique, o teu destino.  </div>-->  <style>    .loading {      top: 0;      bottom: 0;      left: 0;      right: 0;      margin: auto;      position: absolute;      max-width: 100%;      max-height: 100%;      overflow: auto;      text-align: center;      background-color: white;      z-index: 1000;      display: flex;      align-items: center;      flex-direction: column;      justify-content: center;    }    .loading .bars {      margin: 20px auto;      width: 100%;    }    .loading-bar {      display: inline-block;      width: 4px;      height: 18px;      border-radius: 4px;      animation: loading 1s ease-in-out infinite;    }    .loading-bar:nth-child(1) {      background-color: #27ae60;      animation-delay: 0;    }    .loading-bar:nth-child(2) {      background-color: #f1c40f;      animation-delay: 0.09s;    }    .loading-bar:nth-child(3) {      background-color: #c0392b;      animation-delay: .18s;    }    .loading-bar:nth-child(4) {      background-color: #c0392b;      animation-delay: .27s;    }    @keyframes loading {      0% {        transform: scale(1);      }      20% {        transform: scale(1, 2.2);      }      40% {        transform: scale(1);      }    }  </style></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CompetitionComponent', 'selector': 'app-competition'},{'name': 'CreateAccountComponent', 'selector': 'app-create-account'},{'name': 'EditUserInfoComponent', 'selector': 'app-edit-user-info'},{'name': 'FilterUserInfoComponent', 'selector': 'app-filter-user-info'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MatchComponent', 'selector': 'app-match'},{'name': 'RecommendationModalComponent', 'selector': 'app-recommendation-modal'},{'name': 'TeamComponent', 'selector': 'app-team'},{'name': 'TeamMediaComponent', 'selector': 'app-team-media'},{'name': 'TeamPlayerComponent', 'selector': 'app-team-player'},{'name': 'TeamPlayerEvaluationModalComponent', 'selector': 'app-tryout-modal'},{'name': 'TeamProfileComponent', 'selector': 'app-team-profile'},{'name': 'TeamRosterComponent', 'selector': 'app-team-roster'},{'name': 'TeamStatsComponent', 'selector': 'app-team-stats'},{'name': 'TryoutModalComponent', 'selector': 'app-tryout-modal'},{'name': 'UserInfoProfileComponent', 'selector': 'app-user-info-profile'},{'name': 'User_infoComponent', 'selector': 'app-user-info'},{'name': 'User_infoMediaComponent', 'selector': 'app-user-info-media'},{'name': 'User_infoStatsComponent', 'selector': 'app-user-info-stats'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TeamMediaComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TeamMediaComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

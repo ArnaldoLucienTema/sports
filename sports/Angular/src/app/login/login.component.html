@@ -1,0 +1,10 @@
+<form class="login-form">
+
+    <input placeholder="Nome de usuário" id="username" name="username"
+           required [(ngModel)]="model.username">
+
+    <input placeholder="Palavra-passe" id="password" name="password"
+           required type="password" [(ngModel)]="model.password">
+
+  <button [disabled]="model.username == null" (click)="login()" type="submit" class="btn btn-success">Entrar</button>
+</form>

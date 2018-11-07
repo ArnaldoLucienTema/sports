@@ -1,0 +1,45 @@
+<h2 *ngIf="create">Faz uma recomendação</h2>
+<h2 *ngIf="!create && edit">Edita a tua recomendação</h2>
+<div class="creation-modal">
+  <div class="creation-modal__modal-header">
+    <span>Criar Captação</span>
+    <mat-icon (click)="onNoClick()">
+      highlight_off
+    </mat-icon>
+  </div>
+  <form class="creation-modal__modal-form">
+    <mat-form-field class="col-sm-12">
+      <mat-select placeholder="Escalão" name="age_group" [(ngModel)]="age_group">
+        <mat-option value="Infantis">
+          Infantis
+        </mat-option>
+        <mat-option value="Iniciados">
+          Iniciados
+        </mat-option>
+        <mat-option value="Senior">
+          Senior
+        </mat-option>
+        <mat-option value="Juvenis">
+          Juvenis
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="col-sm-12">
+      <input matInput placeholder="Morada" name="address" [(ngModel)]="address" >
+    </mat-form-field>
+    <mat-form-field class="col-sm-12">
+      <input matInput placeholder="Dias" name="days" [(ngModel)]="days" >
+    </mat-form-field>
+    <mat-form-field class="col-sm-12">
+      <input matInput placeholder="Hora" name="time" [(ngModel)]="time" >
+    </mat-form-field>
+    <mat-form-field class="col-sm-12">
+        <textarea matInput placeholder="Notas / Requisitos" matTextareaAutosize matAutosizeMinRows="3"
+                  name="requirements" [(ngModel)]="requirements" ></textarea>
+    </mat-form-field>
+  </form>
+  <div class="creation-modal__buttons">
+    <button mat-raised-button (click)="onCreateClick()">Confirmar</button>
+    <button mat-button (click)="onNoClick()" mat-button>Cancelar</button>
+  </div>
+</div>

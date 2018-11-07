@@ -1,0 +1,446 @@
+<div *ngIf="viewModel" class="match">
+  <div class="result-info col-md-10">
+    <a class="match-competition" routerLink="/competition">
+      <img *ngIf="viewModel.competition_season.avatar != null || viewModel.competition_season.avatar != ''"
+           src="{{viewModel.competition_season.avatar}}">
+      <div *ngIf="viewModel.competition_season.avatar == null || viewModel.competition_season.avatar == ''">
+        {{viewModel.competition_season.name}}
+      </div>
+    </a>
+    <div class="game-info">
+      <div class="date">{{viewModel.date}}</div>
+      <div class="info">
+        {{viewModel.stadium}}
+        {{viewModel.phase}}
+      </div>
+    </div>
+    <div class="match-team-info">
+      <div class="home-team col-md-5">
+        <a routerLink="/team">
+          <img src="{{viewModel.home_team.avatar}}" class="col-md-4">
+        </a>
+        <table class="col-md-6">
+          <tbody>
+          <tr>
+            <a routerLink="/team">
+              {{viewModel.home_team.name}}
+            </a>
+          </tr>
+          <tr class="team-goals">
+            <ng-container *ngFor="let goal_time of viewModel.home_team.goals">
+              {{goal_time}}'
+            </ng-container>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class=" col-md-2 result">
+        {{viewModel.home_team.goals.length}} - {{viewModel.away_team.goals.length}}
+      </div>
+      <div class="away-team col-md-5">
+        <table class="col-md-6">
+          <tbody>
+          <tr>
+            <a routerLink="/team">
+              {{viewModel.away_team.name}}
+            </a>
+          </tr>
+          <tr class="team-goals">
+            <ng-container *ngFor="let goal_time of viewModel.away_team.goals">
+              {{goal_time}}'
+            </ng-container>
+          </tr>
+          </tbody>
+        </table>
+        <a routerLink="/team">
+          <img src="{{viewModel.away_team.avatar}}" class="col-md-4">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-5 home-row">
+      <div class="roster">
+        <table class="roster-table">
+          <caption class="centered caption">
+            11 Inicial
+          </caption>
+          <tbody>
+          <tr *ngFor="let player of viewModel.home_team.main_lineup" class="tr-odd">
+            <td title="{{player.positions[0]}}" class="centered number_move first-td">
+              <div class="list_number">{{player.number}}</div>
+            </td>
+            <td title="" class="roster-name-td">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2" class="">
+                    <a routerLink="/user-info/{{player.user_info_id}}">
+                      <div mat-card-avatar class="sc-mat-card-avatar profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + player.avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{player.user_info_id}}">
+                      {{player.name}}
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{player.positions[0]}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{player.nationality}}"
+                   alt="{{player.nationality}}" class="list_flag">
+            </td>
+            <td class="centered">
+              <div *ngIf="player.goals && player.goals.length > 0">
+                <img class="icon" src="/assets/ball.png"> {{player.goals.length}}
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="roster">
+        <table class="roster-table">
+          <caption class="centered caption">
+            Suplentes
+          </caption>
+          <tbody>
+          <tr *ngFor="let player of viewModel.home_team.reserves" class="tr-odd">
+            <td title="{{player.positions[0]}}" class="centered number_move first-td">
+              <div class="list_number">{{player.number}}</div>
+            </td>
+            <td title="" class="roster-name-td">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2" class="">
+                    <a routerLink="/user-info/{{player.user_info_id}}">
+                      <div mat-card-avatar class="sc-mat-card-avatar profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + player.avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{player.user_info_id}}">
+                      {{player.name}}
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{player.positions[0]}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{player.nationality}}"
+                   alt="{{player.nationality}}" class="list_flag">
+            </td>
+            <td class="centered">
+              <div *ngIf="player.goals && player.goals.length > 0">
+                <img class="icon" src="/assets/ball.png">{{player.goals.length}}
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="roster" *ngIf="viewModel.home_team.staff.length > 0">
+        <table class="roster-table">
+          <thead class="table_header">
+          <tr>
+            <th class="centered">Cargo</th>
+            <th>Técnico</th>
+            <th class="centered country-col">País</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td title="{{viewModel.home_team.staff[0].name}}" class="centered first-td">
+              <div class="list_role">Treinador principal</div>
+            </td>
+            <td class="roster-name-td">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2" class="">
+                    <a routerLink="/user-info/{{player.user_info_id}}">
+                      <div mat-card-avatar class="sc-mat-card-avatar profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + viewModel.home_team.staff[0].avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{player.user_info_id}}">
+                      {{viewModel.home_team.staff[0].name}}
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{viewModel.home_team.staff[0].nationality}}"
+                   alt="{{viewModel.home_team.staff[0].nationality}}" class="list_flag">
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="achievements" *ngIf="viewModel.home_team.achievements && viewModel.home_team.achievements.length > 0">
+        <div *ngFor="let achievement of viewModel.home_team.achievements">
+          <div class="sc-achievement-accomplished">
+            <div class="sc-achievement-accomplished__logos">
+              <img class="sc-rounded-image" [src]="achievement.avatar">
+              <img [src]="achievement.avatar">
+            </div>
+            <div class="sc-achievement-accomplished__headings">
+              <h4>{{achievement.name}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-md-5 away-row">
+      <div class="roster">
+        <table class="roster-table">
+          <caption class="centered caption">
+            11 Inicial
+          </caption>
+          <tbody>
+          <tr *ngFor="let player of viewModel.away_team.main_lineup" class="tr-odd">
+            <td title="{{player.positions[0]}}" class="centered number_move first-td">
+              <div class="list_number">{{player.number}}</div>
+            </td>
+            <td title="" class="roster-name-td">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2" class="">
+                    <a routerLink="/user-info/{{player.user_info_id}}">
+                      <div mat-card-avatar class="sc-mat-card-avatar profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + player.avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{player.user_info_id}}">
+                      {{player.name}}
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{player.positions[0]}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{player.nationality}}"
+                   alt="{{player.nationality}}" class="list_flag">
+            </td>
+            <td class="centered">
+              <div *ngIf="player.goals && player.goals.length > 0">
+                <img class="icon" src="/assets/ball.png"> {{player.goals.length}}
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="roster">
+        <table class="roster-table">
+          <caption class="centered caption">
+            Suplentes
+          </caption>
+          <tbody>
+          <tr *ngFor="let player of viewModel.away_team.reserves" class="tr-odd">
+            <td title="{{player.positions[0]}}" class="centered number_move first-td">
+              <div class="list_number">{{player.number}}</div>
+            </td>
+            <td title="" class="roster-name-td">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2" class="">
+                    <a routerLink="/user-info/{{player.user_info_id}}">
+                      <div class="sc-mat-card-avatar profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + player.avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{player.user_info_id}}">
+                      {{player.name}}
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{player.positions[0]}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{player.nationality}}"
+                   alt="{{player.nationality}}" class="list_flag">
+            </td>
+            <td class="centered">
+              <div *ngIf="player.goals && player.goals.length > 0">
+                <img class="icon" src="/assets/ball.png"> {{player.goals.length}}
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="roster" *ngIf="viewModel.home_team.staff.length > 0">
+        <table class="roster-table">
+          <thead class="table_header">
+          <tr>
+            <th class="centered">Cargo</th>
+            <th>Técnico</th>
+            <th class="centered country-col">País</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td title="{{viewModel.away_team.staff[0].name}}" class="centered first-td">
+              <div class="list_role">Treinador principal</div>
+            </td>
+            <td class="roster-name-td">
+              <table class="inline-table" title="">
+                <tbody>
+                <tr>
+                  <td rowspan="2" class="">
+                    <a routerLink="/user-info/{{player.user_info_id}}">
+                      <div mat-card-avatar class="sc-mat-card-avatar profile-small-image"
+                           [ngStyle]="{'background-image':  'url(' + viewModel.away_team.staff[0].avatar + ')'}"></div>
+                    </a>
+                  </td>
+                  <td class="table-link">
+                    <a
+                      routerLink="/user-info/{{player.user_info_id}}">
+                      {{viewModel.away_team.staff[0].name}}
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+            <td class="centered">
+              <img src="/assets/flags/pt.svg" title="{{viewModel.away_team.staff[0].nationality}}"
+                   alt="{{viewModel.away_team.staff[0].nationality}}" class="list_flag">
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="achievements" *ngIf="viewModel.away_team.achievements && viewModel.away_team.achievements.length > 0">
+        <div *ngFor="let achievement of viewModel.away_team.achievements">
+          <div class=" w sc-achievement-accomplished">
+            <div class="col-md-5 sc-achievement-accomplished__logos">
+              <img class="sc-rounded-image" [src]="achievement.avatar">
+              <img [src]="achievement.avatar">
+            </div>
+            <div class="col-md-7 sc-achievement-accomplished__headings">
+              <h4>{{achievement.name}}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="referee">
+      <strong>Árbitro</strong>
+      <br>
+      {{viewModel.referee}}
+    </div>
+  </div>
+</div>
+<div [hidden]="viewModel" class="loading">
+  <img src="/assets/SP_Logo_Black.png" style="height: 100px; width: auto;">
+  <div class="bars">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>
+  <!--<div style="color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;">
+    Um jogo, um clique, o teu destino.
+  </div>-->
+  <style>
+    .loading {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .loading .bars {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .loading-bar {
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 4px;
+      animation: loading 1s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      background-color: #27ae60;
+      animation-delay: 0;
+    }
+
+    .loading-bar:nth-child(2) {
+      background-color: #f1c40f;
+      animation-delay: 0.09s;
+    }
+
+    .loading-bar:nth-child(3) {
+      background-color: #c0392b;
+      animation-delay: .18s;
+    }
+
+    .loading-bar:nth-child(4) {
+      background-color: #c0392b;
+      animation-delay: .27s;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1, 2.2);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</div>

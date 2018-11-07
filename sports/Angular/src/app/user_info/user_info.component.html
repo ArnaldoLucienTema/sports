@@ -1,0 +1,111 @@
+<div *ngIf="viewModel" style="overflow: hidden">
+  <div class="player">
+    <div class="player-header" id="navbar">
+      <div class="row">
+        <div class="player-info">
+          <div class="team">
+            <a routerLink="/team/{{viewModel.current_season.team.team_id}}" title="{{viewModel.current_season.team.id}}">
+              <img [src]="viewModel.current_season.team.avatar" [title]="viewModel.current_season.team.name"
+                   [alt]="viewModel.current_season.team.acronym">
+            </a>
+          </div>
+          <h1>
+            {{viewModel.current_season.personal_info.name}}
+          </h1>
+          <div class="player-team">
+            <a routerLink="/team/{{viewModel.current_season.team.team_id}}" [title]="viewModel.current_season.team.name">
+              {{viewModel.current_season.team.name}}
+            </a>
+          </div>
+        </div>
+        <div class="player-menu">
+          <span id="profile" (mouseover)='over($event, true)' (mouseleave)='over($event, false)' title="{{viewModel.current_season.personal_info.name}}" (click)="changeTab('profile')" class="current">Perfil</span>
+          <span id="media" (mouseover)='over($event, true)' (mouseleave)='over($event, false)' title="{{viewModel.current_season.personal_info.name}}" (click)="changeTab('media')" class="">Media</span>
+          <span id="stats" (mouseover)='over($event, true)' (mouseleave)='over($event, false)' title="{{viewModel.current_season.personal_info.name}}" (click)="changeTab('stats')" class="">Estatísticas</span>
+        </div>
+      </div>
+    </div>
+    <div class="player-header-placeholder"></div>
+    <app-user-info-profile *ngIf="hasClass('profile', 'current')"></app-user-info-profile>
+    <app-user-info-media *ngIf="hasClass('media', 'current')"></app-user-info-media>
+    <app-user-info-stats *ngIf="hasClass('stats', 'current')"></app-user-info-stats>
+    <div class="player-header-placeholder-small"></div>
+  </div>
+</div>
+<div [hidden]="viewModel" class="loading">
+  <img src="/assets/SP_Logo_Black.png" style="height: 100px; width: auto;">
+  <div class="bars">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>
+  <!--<div style="color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;">
+    Um jogo, um clique, o teu destino.
+  </div>-->
+  <style>
+    .loading {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .loading .bars {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .loading-bar {
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 4px;
+      animation: loading 1s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      background-color: #27ae60;
+      animation-delay: 0;
+    }
+
+    .loading-bar:nth-child(2) {
+      background-color: #f1c40f;
+      animation-delay: 0.09s;
+    }
+
+    .loading-bar:nth-child(3) {
+      background-color: #c0392b;
+      animation-delay: .18s;
+    }
+
+    .loading-bar:nth-child(4) {
+      background-color: #c0392b;
+      animation-delay: .27s;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1, 2.2);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</div>

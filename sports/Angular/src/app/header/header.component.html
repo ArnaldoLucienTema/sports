@@ -1,0 +1,49 @@
+<nav *ngIf="viewModel">
+  <div class="nav-wrapper sc-background app-nav sc-navbar">
+    <div class="header-row row">
+      <a href="/home">
+        <img src="/assets/SP_Logo_White_Symbol.png" class="brand-logo app-logo"/>
+      </a>
+      <app-login *ngIf="!isAuthenticated(); else search_bar"></app-login>
+      <div #search_bar *ngIf="isAuthenticated()" class="sc-header-search__input-container"
+           (clickOutside)="searchResults = null"
+           (focus)="searchFor()">
+        <input class="sc-header-search__input" (keyup)="searchFor()" [(ngModel)]="searchString" placeholder="Pesquisar">
+        <mat-icon matSuffix style="color:black">search</mat-icon>
+        <div *ngIf=" searchResults!= null && searchResults.length > 0" class="sc-header-search__item-list-container">
+          <div class="sc-header-search__item-list">
+            <div class="sc-header-search__item" *ngFor="let user of searchResults">
+              <a href="/user-info/{{user.user_info_id}}">
+                <img class="sc-rounded-image" [src]="user.personal_info.avatar">
+              </a>
+              <div class="sc-search-info">
+                <a href="/user-info/{{user.user_info_id}}">
+                  <h4>{{user.personal_info.name}}</h4>
+                </a>
+                <a href="/team/{{user.team.team_id}}">
+                  <p> {{user.team.name}} </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a *ngIf="isAuthenticated()" href="/filter-user-info">
+        <img src="/assets/search_players.png" class="brand-logo app-logo"/>
+      </a>
+
+      <div *ngIf="isAuthenticated()" class="profile-menu">
+        <a *ngIf="viewModel.avatar" routerLink="/user-info/{{viewModel.profile_id}}" class="avatar">
+          <img [src]="viewModel.avatar" class="sc-profile-small-image">
+        </a>
+
+        <a href="/home">
+          <img src="/assets/logout.png" class="brand-logo app-logo" (click)="logout()"/>
+        </a>
+
+        <app-notifications></app-notifications>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="player-header-placeholder"></div>

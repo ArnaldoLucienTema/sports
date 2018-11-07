@@ -1,0 +1,21 @@
+<div class="profile-menu__notifications"
+     (click)="show_notifications=true"
+     (clickOutside)="show_notifications=false">
+  <mat-icon>notifications</mat-icon>
+  <span *ngIf="notifications_list.length > 0"> !</span>
+  <div *ngIf="show_notifications" class="notifications-box">
+    <div *ngFor="let notification of notifications_list" class="notification">
+      <div class="notification__entities-logos">
+        <img class="sc-rounded-image"
+             [src]="notification.author.avatar">
+        <img class="sc-squared-image"
+             [src]="notification.target.avatar">
+      </div>
+      <div class="notification__description">
+        <h4>{{notification.author.name}}</h4>
+        <h5>{{notification.text}}</h5>
+        <h6>{{notification.date}}</h6>
+      </div>
+    </div>
+  </div>
+</div>

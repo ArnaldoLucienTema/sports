@@ -1,0 +1,404 @@
+<div *ngIf="viewModel" class="row">
+  <div class="row-left-stats">
+    <table class="table-order-center" matSort (matSortChange)="sortData($event)">
+      <tr>
+        <th mat-sort-header="Recente">Época</th>
+        <th mat-sort-header="Popular">Competição</th>
+        <th mat-sort-header="Gostos">Total</th>
+      </tr>
+    </table>
+    <div class="stats">
+      <table class="sc-stats-table">
+        <tbody>
+        <tr class="table_header">
+          <th class="th-td-first">Liga</th>
+          <th>Jogos</th>
+          <th>Class.</th>
+          <th>Vitórias</th>
+          <th>Derrotas</th>
+          <th>Empates</th>
+          <th>G. Marcados</th>
+          <th class="th-td-last">G. Sofridos</th>
+        </tr>
+        <tr *ngFor="let stat of viewModel.current_season.standings; let _idx = index "
+            class="{{ _idx % 2 ? ' tr-even': 'tr-odd ' }} {{_idx == 0 ? ' tr-current-season ' : '' }}">
+          <td>
+            <img class="league" src="{{stat.avatar}}" alt="{{stat.name}}">
+          </td>
+          <td>{{stat.matches}}</td>
+          <td>
+            <div *ngIf="stat.position != null">{{stat.position}}º</div>
+            <div *ngIf="stat.position == null">-</div>
+          </td>
+          <td>{{stat.wins}}</td>
+          <td>{{stat.losses}}</td>
+          <td>{{stat.draws}}</td>
+          <td>{{stat.goals}}</td>
+          <td>{{stat.goals_taken}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row-right-matches">
+    <table class="center-header">
+      Jogos
+    </table>
+    <div id="sc-scoreboard" class="team-stats-matches">
+      <section>
+        <a class="score-tile-wrapper" href="/match">
+          <div class="score-tile score-tile-final" role="status">
+            <div class="score-tile-min__wrapper">
+              <div class="score-tile__top">
+                27-03-2018
+                <div class="score-tile-broadcaster">
+                  <span class="broadcaster lp">II Liga</span>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--visitor  small-collapse">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="{{viewModel.name}} Logo" class="team-logo" src="{{viewModel.avatar}}">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">{{viewModel.name}}</div>
+                    <div class="team-record">(48' 34' 56' 59')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">4</div>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--home  small-collapse team-game-score--loser">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="SLB Logo" class="team-logo" src="http://www.zerozero.pt/img/logos/equipas/4_imgbank.png">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">SL Benfica</div>
+                    <div class="team-record">(35')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">1</div>
+                </div>
+              </div>
+            </div>
+            <div class="sc-highlights">Arnaldo Tema fez hat-trick</div>
+          </div>
+        </a>
+
+      </section>
+      <section>
+        <a class="score-tile-wrapper" href="/match">
+          <div class="score-tile score-tile-final" role="status">
+            <div class="score-tile-min__wrapper">
+              <div class="score-tile__top">
+                27-03-2018
+                <div class="score-tile-broadcaster">
+                  <span class="broadcaster lp">II Liga</span>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--visitor  small-collapse">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="{{viewModel.name}} Logo" class="team-logo" src="{{viewModel.avatar}}">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">{{viewModel.name}}</div>
+                    <div class="team-record">(48' 34' 56' 59')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">4</div>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--home  small-collapse team-game-score--loser">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="SLB Logo" class="team-logo" src="http://www.zerozero.pt/img/logos/equipas/4_imgbank.png">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">SL Benfica</div>
+                    <div class="team-record">(35')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">1</div>
+                </div>
+              </div>
+            </div>
+            <div class="sc-highlights">Arnaldo Tema fez hat-trick</div>
+          </div>
+        </a>
+
+      </section>
+      <section>
+        <a class="score-tile-wrapper" href="/match">
+          <div class="score-tile score-tile-final" role="status">
+            <div class="score-tile-min__wrapper">
+              <div class="score-tile__top">
+                27-03-2018
+                <div class="score-tile-broadcaster">
+                  <span class="broadcaster lp">II Liga</span>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--visitor  small-collapse">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="{{viewModel.name}} Logo" class="team-logo" src="{{viewModel.avatar}}">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">{{viewModel.name}}</div>
+                    <div class="team-record">(48' 34' 56' 59')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">4</div>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--home  small-collapse team-game-score--loser">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="SLB Logo" class="team-logo" src="http://www.zerozero.pt/img/logos/equipas/4_imgbank.png">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">SL Benfica</div>
+                    <div class="team-record">(35')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">1</div>
+                </div>
+              </div>
+            </div>
+            <div class="sc-highlights">Arnaldo Tema fez hat-trick</div>
+          </div>
+        </a>
+
+      </section>
+      <section>
+        <a class="score-tile-wrapper" href="/match">
+          <div class="score-tile score-tile-final" role="status">
+            <div class="score-tile-min__wrapper">
+              <div class="score-tile__top">
+                27-03-2018
+                <div class="score-tile-broadcaster">
+                  <span class="broadcaster lp">II Liga</span>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--visitor  small-collapse">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="{{viewModel.name}} Logo" class="team-logo" src="{{viewModel.avatar}}">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">{{viewModel.name}}</div>
+                    <div class="team-record">(48' 34' 56' 59')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">4</div>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--home  small-collapse team-game-score--loser">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="SLB Logo" class="team-logo" src="http://www.zerozero.pt/img/logos/equipas/4_imgbank.png">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">SL Benfica</div>
+                    <div class="team-record">(35')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">1</div>
+                </div>
+              </div>
+            </div>
+            <div class="sc-highlights">Arnaldo Tema fez hat-trick</div>
+          </div>
+        </a>
+
+      </section>
+      <section>
+        <a class="score-tile-wrapper" href="/match">
+          <div class="score-tile score-tile-final" role="status">
+            <div class="score-tile-min__wrapper">
+              <div class="score-tile__top">
+                27-03-2018
+                <div class="score-tile-broadcaster">
+                  <span class="broadcaster lp">II Liga</span>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--visitor  small-collapse">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="{{viewModel.name}} Logo" class="team-logo" src="{{viewModel.avatar}}">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">{{viewModel.name}}</div>
+                    <div class="team-record">(48' 34' 56' 59')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">4</div>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--home  small-collapse team-game-score--loser">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="SLB Logo" class="team-logo" src="http://www.zerozero.pt/img/logos/equipas/4_imgbank.png">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">SL Benfica</div>
+                    <div class="team-record">(35')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">1</div>
+                </div>
+              </div>
+            </div>
+            <div class="sc-highlights">Arnaldo Tema fez hat-trick</div>
+          </div>
+        </a>
+
+      </section>
+      <section>
+        <a class="score-tile-wrapper" href="/match">
+          <div class="score-tile score-tile-final" role="status">
+            <div class="score-tile-min__wrapper">
+              <div class="score-tile__top">
+                27-03-2018
+                <div class="score-tile-broadcaster">
+                  <span class="broadcaster lp">II Liga</span>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--visitor  small-collapse">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="{{viewModel.name}} Logo" class="team-logo" src="{{viewModel.avatar}}">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">{{viewModel.name}}</div>
+                    <div class="team-record">(48' 34' 56' 59')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">4</div>
+                </div>
+              </div>
+
+              <div class="team-game-score team-game-score--home  small-collapse team-game-score--loser">
+                <div class="team-game-score__logo column small-2">
+                  <img alt="SLB Logo" class="team-logo" src="http://www.zerozero.pt/img/logos/equipas/4_imgbank.png">
+                </div>
+                <div class="team-game-score__name-record column small-8">
+                  <div class="name-record__wrapper">
+                    <div class="score-tile__team-name">SL Benfica</div>
+                    <div class="team-record">(35')</div>
+                  </div>
+                </div>
+                <div class="team-game-score__score column small-2">
+                  <div class="team-score">1</div>
+                </div>
+              </div>
+            </div>
+            <div class="sc-highlights">Arnaldo Tema fez hat-trick</div>
+          </div>
+        </a>
+
+      </section>
+    </div>
+  </div>
+</div>
+<div [hidden]="viewModel" class="loading">
+  <img src="/assets/SP_Logo_Black.png" style="height: 100px; width: auto;">
+  <div class="bars">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>
+  <!--<div style="color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;">
+    Um jogo, um clique, o teu destino.
+  </div>-->
+  <style>
+    .loading {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .loading .bars {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .loading-bar {
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 4px;
+      animation: loading 1s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      background-color: #27ae60;
+      animation-delay: 0;
+    }
+
+    .loading-bar:nth-child(2) {
+      background-color: #f1c40f;
+      animation-delay: 0.09s;
+    }
+
+    .loading-bar:nth-child(3) {
+      background-color: #c0392b;
+      animation-delay: .18s;
+    }
+
+    .loading-bar:nth-child(4) {
+      background-color: #c0392b;
+      animation-delay: .27s;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1, 2.2);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</div>
+

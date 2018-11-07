@@ -1,0 +1,42 @@
+<table *ngIf="viewModel" class="table-order-center" matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="Recente">Época</th>
+    <th mat-sort-header="Popular">Competição</th>
+    <th mat-sort-header="Gostos">Total</th>
+  </tr>
+</table>
+<div class="row-center-stats">
+  <div class="stats">
+    <table class="sc-stats-big-table">
+      <tbody>
+      <tr class="table_header">
+        <th class="th-td-first">Época</th>
+        <th>Equipa</th>
+        <th>Liga</th>
+        <th>Jogos</th>
+        <th>Golos</th>
+        <th>Assis.</th>
+        <th>CA</th>
+        <th>CV</th>
+        <th class="th-td-last">Min</th>
+      </tr>
+      <tr *ngFor="let stat of viewModel.current_season.stats; let _idx = index "
+          class="{{ _idx % 2 ? ' tr-even': 'tr-odd ' }} {{_idx == 0 ? ' tr-current-season ' : '' }}">
+        <td>{{stat.name}}</td>
+        <td>
+          <img class="league" src="{{viewModel.current_season.team.avatar}}" alt="{{viewModel.current_season.team.name}}">
+        </td>
+        <td>
+          <img class="league" src="{{stat.avatar}}" alt="{{stat.name}}">
+        </td>
+        <td>{{stat.games}}</td>
+        <td>{{stat.goals}}</td>
+        <td>{{stat.assists}}</td>
+        <td>{{stat.yellow_cards}}</td>
+        <td>{{stat.red_cards}}</td>
+        <td>{{stat.minutes_played}}''</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

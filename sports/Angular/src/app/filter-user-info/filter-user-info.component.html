@@ -1,0 +1,220 @@
+<div class="row">
+  <div class="row-center-stats">
+    <div class="centered">
+      <h1>Pesquisa de Jogadores</h1>
+    </div>
+    <div class="sc-forms">
+      <div class="row filters">
+        <div class="col-md-2">
+          <mat-form-field>
+            <mat-select [(ngModel)]="personal_data_select" name="personal_data_select"
+                        (change)="changed(personal_data_select)"
+                        placeholder="Dados Pessoais" multiple>
+              <mat-option *ngFor="let personal_field of personal_data" [value]="personal_field">
+                {{personal_field}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2">
+          <mat-form-field>
+            <mat-select [(ngModel)]="stats_select" (change)="changed(stats_select)" placeholder="Estatística"
+                        multiple>
+              <mat-option *ngFor="let stats_field of stats" [value]="stats_field">
+                {{stats_field}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2">
+          <mat-form-field>
+            <mat-select [(ngModel)]="physical_atts_select" (change)="changed(physical_atts_select)"
+                        placeholder="Atributos Físicos" multiple>
+              <mat-option *ngFor="let physical_atts_field of physical_atts" [value]="physical_atts_field">
+                {{physical_atts_field}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2">
+          <mat-form-field>
+            <mat-select [(ngModel)]="technical_atts_select" (change)="changed(technical_atts_select)"
+                        placeholder="Atributos Técnicos" multiple>
+              <mat-option *ngFor="let technical_atts_field of technical_atts" [value]="technical_atts_field">
+                {{technical_atts_field}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <!--
+        <div class="col-md-2">
+          <mat-form-field>
+            <mat-select [(ngModel)]="mental_atts_select" (change)="changed('personal_data')"
+                        placeholder="Atributos Mentais" multiple>
+              <mat-option *ngFor="let mental_atts_field of mental_atts" [value]="mental_atts_field">
+                {{mental_atts_field}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        -->
+        <div class="col-md-2">
+          <mat-form-field>
+            <mat-select [(ngModel)]="sc_atts_select" (change)="changed(sc_atts_select)" placeholder="Sports Connected"
+                        multiple>
+              <mat-option *ngFor="let sc_atts_field of sc_atts" [value]="sc_atts_field">
+                {{sc_atts_field}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-md-2">
+          <mat-form-field>
+            <mat-select [(ngModel)]="competition_select" (change)="changed(competition_select)" placeholder="Competição"
+                        multiple>
+              <mat-option *ngFor="let competition_field of competitions" [value]="competition_field">
+                {{competition_field}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="search-button">
+        <button mat-raised-button (click)="loadPlayers()" [disabled]="search_fields.length <= 0"
+                class="sc-btn btn-start centered">PESQUISAR
+        </button>
+      </div>
+      <div [hidden]="search_fields && search_fields.length > 0" class="centered  ">
+        <h3>Escolhe em cima o que filtrar</h3>
+      </div>
+      <div class="filter-search-fields">
+        <div class="row">
+          <div class="col-md-4">
+            <table class="table table-bordered">
+              <tbody>
+              <tr *ngFor="let field of search_fields; let i = index">
+                <td>
+                  <mat-chip-list class="mat-chip-list-stacked">
+                    <mat-chip [selectable]="selectable" (click)="deleteFieldValue(i)">
+                      {{field.form}}
+                      <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                  </mat-chip-list>
+                </td>
+                <div>
+                  <td>
+                    <form>
+                      <mat-select [(ngModel)]="field.selected_filter" placeholder="Filtragem" name="selected_filter">
+                        <mat-option *ngFor="let filter_type of field.filters" [value]="filter_type.regex">
+                          {{filter_type.text}}
+                        </mat-option>
+                      </mat-select>
+                    </form>
+                  </td>
+                  <td>
+                    <form *ngIf=" field.selected_filter && field.selected_filter != '$gte,$lte'">
+                      <mat-select [(ngModel)]=" field.selected_value" name="selected_value" placeholder="Valor">
+                        <mat-option *ngFor="let value_type of field.values" [value]="value_type">
+                          {{value_type}}
+                          <span matSuffix>{{field.value_suffix}}</span>
+                        </mat-option>
+                      </mat-select>
+                    </form>
+                    <form *ngIf=" field.selected_filter == '$gte,$lte' " class="range-form">
+                      de
+                      <mat-select [(ngModel)]=" field.selected_value" name="selected_value">
+                        <mat-option *ngFor="let value_type of field.values" [value]="value_type">
+                          {{value_type}}
+                          <span matSuffix>{{field.value_suffix}}</span>
+                        </mat-option>
+                      </mat-select>
+                      até
+                      <mat-select [(ngModel)]=" field.selected_value_end" name="selected_value_end">
+                        <mat-option *ngFor="let value_type of field.values" [value]="value_type">
+                          {{value_type}}
+                          <span matSuffix>{{field.value_suffix}}</span>
+                        </mat-option>
+                      </mat-select>
+                      </form>
+                  </td>
+                </div>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="centered col-md-8 players-table-filter">
+            <div [hidden]="loading || search_fields.length <= 0" *ngIf="players" class="roster">
+
+              <table class=" table-players-search table-order-center" matSort (matSortChange)="sortData($event)">
+                <thead class="table_header">
+                <tr class="centered">
+                  <th></th>
+                  <th>Jogador</th>
+                  <th mat-sort-header="age">Idade</th>
+                  <th mat-sort-header="games">Jogos</th>
+                  <th mat-sort-header="goals">Golos</th>
+                  <th mat-sort-header="assists">Assis.</th>
+                  <th mat-sort-header="height">Altura</th>
+                  <th mat-sort-header="weight">Peso</th>
+                  <th>Clube</th>
+                  <th class="country-col last-td">País</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let player of sortedData">
+                  <td class="centered number_move first-td-img">
+                    <a routerLink="/user-info/{{player._id}}">
+                      <div mat-card-avatar class="profile-small-image sc-mat-card-avatar"
+                           [ngStyle]="{'background-image':  'url(' + player.personal_info.avatar + ')'}">
+                      </div>
+                    </a>
+                  </td>
+                  <td class="player-details-td">
+                    <table class="inline-table" title="">
+                      <tbody>
+                      <tr>
+                        <td class="table-link">
+                          <a
+                            routerLink="/user-info/{{player.user_info_id}}">
+                            {{player.personal_info.name}}
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>{{player.personal_info.positions[0]}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td class="centered">{{player.personal_info.age}}</td>
+                  <td class="centered">{{player.stats[0].games}}</td>
+                  <td class="centered">{{player.stats[0].goals}}</td>
+                  <td class="centered">{{player.stats[0].assists}}</td>
+                  <td class="centered">{{player.personal_info.height}}</td>
+                  <td class="centered">{{player.personal_info.weight}}</td>
+                  <td class="centered">
+                    <a routerLink="/team/{{player.team.team_id}}">
+                      <img src="{{player.team.avatar}}" title="{{player.team.name}}"
+                           alt="{{player.team.name}}" class="team-img">
+                    </a>
+                  </td>
+                  <td class="centered">
+                    <img src="/assets/flags/pt.svg" title="{{player.personal_info.nationality}}"
+                         alt="{{player.personal_info.nationality}}" class="list_flag">
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div [hidden]="!loading">
+              A carregar...
+            </div>
+            <div [hidden]="!no_results">
+              Não há resultados
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

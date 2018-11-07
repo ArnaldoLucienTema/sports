@@ -1,0 +1,1401 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/vis/dist/vis.min.css';
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '../node_modules/bootstrap-grid-only/bootstrap.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+[hidden], template {
+  display: none !important;
+}
+
+.sc-container {
+  margin: 20px auto;
+}
+
+.sc-btn{
+  width: 100px !important;
+  margin-right: 2px !important;
+  margin-left: 2px !important;
+}
+
+.sc-automatic-btn{
+  width: -webkit-fill-available;
+  margin: 10px 2px 0 2px !important;
+}
+
+.default-input {
+  margin: 0px !important;
+  height: auto !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.vis-item.vis-selected {
+  border-color: #97b0f8 !important;
+  background-color: #d5ddf6 !important;
+  z-index: 1 !important;
+}
+
+.vis-item {
+  cursor: pointer;
+}
+
+.vis-item .vis-item-overflow {
+  overflow: visible;
+}
+
+.dz-success-mark {
+  background-color: red;
+  border-radius: 100%;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: red;
+}
+
+.mat-sort-header-button:focus {
+  background-color: transparent !important;
+}
+
+.selectize-control .selectize-input.disabled {
+  opacity: 1 !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+.selectize-control .selectize-input.disabled input {
+  height: 0px;
+}
+
+.selectize-control.multi .selectize-input.disabled > div, .selectize-control.multi .selectize-input.disabled > div.active {
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3) !important;
+  border-radius: 3px !important;
+  background-color: #d3d3d3 !important;
+  background-repeat: repeat-x !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03) !important;
+}
+
+.selectize-control.multi .selectize-input.disabled [data-value] {
+  display: block;
+  color: #ffffff !important;
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3) !important;
+  border-radius: 3px !important;
+  background-color: #888888 !important;
+  background-image: none !important;
+  background-repeat: repeat-x !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03) !important;
+  border: none;
+}
+
+.selectize-control.multi .selectize-input [data-value] {
+  display: block;
+  color: #ffffff !important;
+  text-shadow: 0 1px 0 rgba(0, 51, 83, 0.3) !important;
+  border-radius: 3px !important;
+  background-color: #888888 !important;
+  background-image: none !important;
+  background-repeat: repeat-x !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.03) !important;
+  border: none !important;
+}
+
+.selectize-control.single .selectize-input.disabled:after {
+  display: none;
+}
+
+.mydp .selection {
+  background-color: transparent !important;
+}
+
+.mydp .selection:focus {
+  border-bottom: inherit !important;
+  box-shadow: none !important;
+}
+
+.app-nav {
+  position: relative;
+}
+
+.sc-background {
+  background-color: #032f4f !important;
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.app-logo {
+  height: 30px;
+  margin: 10px 20px 15px 20px;
+}
+
+.footer-logo {
+  height: 55px;
+  margin: 0px 10px 0px 0px;
+}
+
+.mobiliar-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  color: white;
+  margin-bottom: 15px;
+}
+
+.sc-navbar {
+  display: flex;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+  width: 100%;
+  max-width: 100%;
+  background: #2e2f32;
+  position: fixed;
+}
+
+.title-grey {
+  color: #53433F;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.grey {
+  color: #5D4D49;
+}
+
+html {
+  font-size: 15px !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.league {
+  max-width: 35px !important;
+  max-height: 50px !important;
+}
+
+td {
+  padding: 5px !important;
+  text-align: center !important;
+  font-weight: normal !important;
+}
+
+th {
+  padding: 5px !important;
+  text-align: center !important;
+  font-weight: bold !important;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke !important;
+}
+
+.player-header-placeholder {
+  width: 100%;
+  height: 55px;
+  background: transparent;
+}
+
+.tr-current-season {
+  height: 180px;
+}
+
+.tr-current-season td {
+  font-size: large !important;
+  font-weight: bold !important;
+}
+
+.tr-current-season img {
+  max-width: 50px !important;
+  max-height: none !important;
+}
+
+.tr-odd {
+  background-color: white;
+}
+
+.tr-even {
+  background-color: transparent;
+}
+
+.th-td-first {
+  min-width: 80px !important;
+}
+
+.th-td-last {
+  min-width: 80px !important;
+}
+
+.row-center {
+  width: 50%;
+  margin: 30px auto;
+  float: left;
+}
+
+.row-center-edit-mode {
+  width: 80%;
+  margin: 30px auto 30px auto;
+  float: left;
+}
+
+.row-left {
+  width: 25%;
+  float: left;
+  margin: 30px auto;
+}
+
+.row-right {
+  width: 20%;
+  float: left;
+  margin: 30px auto;
+}
+
+.roster {
+
+}
+
+.away-row .roster {
+  float: right;
+}
+
+.home-row .roster {
+  float: left;
+}
+
+.auto-height {
+
+}
+
+.auto-height td {
+  height: auto !important;
+}
+
+.even {
+  background-color: transparent;
+}
+
+.odd {
+  background-color: white;
+}
+
+.sc-media {
+  margin: 10px;
+  padding: 20px;
+}
+
+.recommendations {
+  margin: 10px;
+}
+
+.recommendations .content {
+  padding: 10px 20px;
+  display: inline-block;
+  width: 100%;
+  background-color: #7a8b98;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.recommendations .header {
+  color: white;
+  margin: 20px 0;
+  display: flex;
+}
+
+.recommendations .header .title {
+  margin: 5px auto 5px 0;
+  padding: 0;
+  width: fit-content;
+}
+
+.achievements {
+  margin: 10px;
+}
+
+.indicators {
+  margin: 20px;
+}
+
+.indicators .text{
+  margin: 5px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #03304f;
+  cursor: pointer;
+}
+
+.indicators .text strong {
+  font-size: 16px;
+}
+
+.achievements .content {
+  max-height: 200px;
+  padding: 10px 20px;
+  display: inline-block;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.achievements .content img{
+  height: auto;
+  padding-left: 0;
+  padding-right: 5px;
+  max-height: 125px;
+  width: auto;
+}
+
+.achievements .content .badges{
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+
+.achievements .content .badges .image{
+  max-width: 33.3%;
+}
+
+.achievements .header {
+  color: darkgrey;
+  margin: 10px 0;
+  display: -ms-flexbox;
+  text-align: center;
+}
+
+.achievements .header .title {
+  margin: 5px auto 5px 0;
+  padding: 0;
+}
+
+
+
+.btn-sc-default {
+  color: white !important;
+  background-color: #032f4f;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.btn-edit {
+  color: #032f4f !important;
+  background-color: white;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.btn-start {
+  background-color: #032f4f;
+  color: white !important;
+  font-family: "Museo Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 !important;
+}
+
+.btn-recommend {
+  background-color: #032f4f;
+  color: white !important;
+  font-family: "Museo Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 10px !important;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.btn-see-more {
+  color: white !important;
+  font-family: "Museo Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 10px !important;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.profile-buttons {
+  margin: 10px auto;
+  width: fit-content;
+}
+
+.heading-buttons {
+  margin: 10px auto auto auto;
+  width: fit-content;
+  float: right;
+}
+
+.roster-img {
+  max-width: 60px !important;
+}
+
+.roster-table .profile-small-image {
+  background-size: cover;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.table-players-search .profile-small-image {
+  background-size: cover;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.big-profile-small-image {
+  background-size: cover;
+  height: 60px !important;
+  width: 60px !important;
+}
+
+.profile-small-image {
+  background-size: cover;
+  max-height: 60px !important;
+  max-width: 60px !important;
+}
+
+.sc-profile-small-image {
+  height: 60px !important;
+  width: 60px !important;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.sc-mat-card-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.country-col {
+  min-width: 50px;
+}
+
+.last-td {
+  padding: 5px 20px 5px 5px !important;
+}
+
+.background-message {
+  font-size: xx-large;
+  color: #b3b5bb;
+  margin-left: 30%;
+}
+
+/* Classes for "Estatísticas"*/
+
+.sc-stats-big-table {
+  width: 100%;
+  margin: 10px auto 20px auto;
+  background-color: transparent;
+  height: 210px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.sc-stats-big-table .table_header {
+  color: #032f4f;
+  background-color: white;
+  height: 50px;
+}
+
+
+.player .meta .sc-stats-big-table {
+  margin: 10px auto 20px auto;
+  background-color: transparent;
+  height: 210px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.player .meta .sc-stats-big-table tbody tr td {
+  color: #57585A;
+  padding: 4px 3px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.player .meta .sc-stats-big-table tr > td figure ~ .player-stats-text {
+  margin: 4px 0px 0px 32px;
+  line-height: 0.6;
+}
+
+.player .meta .sc-stats-big-table tr > th {
+  font-weight: bold !important;
+}
+
+.player .meta .sc-stats-big-table tr > th, td {
+  min-width: 35px !important;
+  padding: 5px 7px;
+  font-size: 12px;
+  height: 60px;
+}
+
+.player .meta .sc-stats-big-table tr > td {
+  border: none;
+  border-bottom: none;
+  border-top: none;
+  padding: 5px;
+  text-align: left;
+  font-size: 12px !important;
+  color: #929292;
+}
+/* End - Classes for "Estatísticas"*/
+
+
+/* Classes for player's "Stats" tables */
+
+.player .meta .sc-stats-table {
+  margin: 10px auto 20px auto;
+  background-color: transparent;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.player .meta .sc-stats-table tbody tr td {
+  color: #57585A;
+  padding: 4px 3px;
+  vertical-align: middle;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.player .meta .sc-stats-table tr > td figure ~ .player-stats-text {
+  margin: 4px 0px 0px 32px;
+  line-height: 0.6;
+}
+
+.player .meta .sc-stats-table tr > th {
+  font-weight: bold !important;
+}
+
+.player .meta .sc-stats-table tr > th, td {
+  min-width: 35px;
+  padding: 5px 7px;
+  font-size: 12px;
+  height: 60px;
+}
+
+.player .meta .sc-stats-table tr > td {
+  border: none;
+  border-bottom: none;
+  border-top: none;
+  padding: 5px;
+  text-align: left;
+  font-size: 12px !important;
+  color: #929292;
+}
+
+/* End of Classes for all "Stats" tables*/
+
+
+.roster-table .caption {
+  background-color: white;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  color: #032f4f;
+  padding: 10px;
+}
+
+.table-players-search .caption {
+  background-color: white;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  color: #032f4f;
+  padding: 10px;
+}
+
+.roster thead {
+  font-size: 12px !important;
+}
+
+.roster table tbody > tr > td, td {
+  text-align: center !important;
+}
+
+.roster table .inline-table {
+  margin: 0;
+  border: 0;
+  width: auto;
+  border-collapse: collapse;
+  box-shadow: none;
+}
+
+.roster .inline-table tbody > tr > td, td {
+  padding: 0px 5px 0px 5px !important;
+  text-align: left;
+
+}
+
+.roster table .inline-table tbody tr td {
+  font-size: 12px !important;
+  color: #333;
+  padding: 0 0 0 5px !important;
+  height: 0px !important;
+  min-width: 0px !important;
+  max-width: 150px !important;
+  vertical-align: middle;
+  -moz-border: none;
+  -moz-border-radius: 0;
+  border-width: 0 !important;
+}
+
+.roster table .inline-table img {
+  vertical-align: bottom;
+}
+
+.roster table .table-link {
+  font-weight: bold !important;
+}
+
+.roster .di {
+  display: inline !important;
+}
+
+.roster .nowrap {
+  white-space: nowrap;
+}
+
+.roster .grid-view table th {
+  background-color: #f2f2f2;
+  color: #000;
+  border-top: 0;
+}
+
+.roster-table {
+  width: 300px;
+  margin: 10px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.table-players-search {
+  min-width: 80%;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  margin: 20px auto;
+}
+
+.tryout-table {
+  margin: 10px;
+}
+
+.tryout-table td {
+  padding: 5px !important;
+}
+
+.tryout-table tbody {
+}
+
+.tryout-table .caption {
+  font-weight: bold;
+  background-color: seagreen;
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  color: white;
+  padding: 10px;
+}
+
+.personal-table {
+  margin: 20px 0;
+  background-color: #798b9757;
+  float: none !important;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.personal-table tr {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.personal-table td {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: black !important;
+  font-weight: 300 !important;
+  text-align: left !important;
+  border: none !important;
+  padding: 5px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.personal-table .first-td-padding{
+  padding-top: 10px !important;
+}
+
+.personal-table .last-td-padding{
+  padding-bottom: 10px !important;;
+
+}
+
+table .caption {
+  font-weight: bold;
+  background-color: white;
+  border-bottom: 1px solid #e4e4e4;
+  color: #032f4f;
+  padding: 10px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 0px 0px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.achievement-player {
+  font-size: larger;
+}
+
+table .caption img {
+  height: 60px;
+  width: auto;
+  margin: 0 5px 0 0;
+}
+
+.first-td {
+  background-color: #798b97 !important;
+  color: white !important;
+  max-width: 80px;
+  font-weight: bold !important;
+}
+
+.first-td-img {
+  color: white !important;
+  max-width: 80px;
+  font-weight: bold !important;
+  padding: 5px 10px !important;
+}
+
+.mat-fab.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+  background-color: #4383a882;
+}
+
+.documentation footer {
+  padding-left: 0;
+}
+
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+.sc-footer {
+  background-color: white !important;
+  border-top: 1px solid #333333;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+.text-md-left {
+  text-align: left !important;
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.footer-links a {
+  color: #032f4f;
+}
+
+.navbar-search {
+  margin: auto 30px auto 100px;
+}
+
+.navbar-search .input {
+  color: white;
+}
+
+.player-header-placeholder-small {
+  width: 100%;
+  height: 25px;
+  background: transparent;
+}
+
+.over {
+  text-decoration: underline;
+}
+
+.stats {
+  margin: 10px;
+}
+
+/* Team stats */
+.row-center-stats {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 1200px;
+}
+
+.row-left-stats {
+  width: 70%;
+  margin-left: 0px !important;
+  margin-right: auto !important;
+  float: left;
+}
+
+.row-right-matches {
+  width: 30%;
+  margin-right: 0px !important;
+  margin-left: auto !important;
+  float: right;
+}
+ /* End team stats */
+
+.soon-msg {
+  font-size: xx-large;
+  margin: 100px auto;
+  color: #b3b5bb;
+  text-align: center;
+}
+
+.player .player-menu span.current {
+  background: #032f4f;
+  color: white !important;
+}
+
+.login-form {
+  margin: 0px 100px;
+}
+
+.login-form input{
+  color: black !important;
+}
+
+
+
+.login-form .mat-form-field {
+  color: black;
+}
+
+.login-form .button {
+  margin-left: 10px;
+}
+
+.mat-form-field-disabled .mat-form-field-underline {
+  display: none !important;
+}
+
+.mat-input-element:disabled {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mat-select-disabled .mat-select-value {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mat-select-disabled .mat-select-arrow {
+  color: white !important;
+}
+
+.small-border {
+  border: 2px solid transparent;
+}
+
+table tbody tr td {
+  color: #57585A;
+  padding: 4px 3px;
+  vertical-align: middle;
+  border: none;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+table .centered {
+  text-align: center;
+}
+
+table .number_move {
+  width: 60px;
+}
+
+table .role_move {
+  width: 50%;
+}
+
+.centered {
+  text-align: center;
+}
+
+.centered mat-form-field{
+  width: 24%;
+  padding: 0 5px;
+}
+
+.match-form mat-form-field{
+  width: 18%;
+  padding: 0 5px;
+}
+
+
+table .list_number {
+  width: 24px;
+  height: 24px;
+  padding-top: 4px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+table .list_role {
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+}
+
+table .centered {
+  text-align: center;
+}
+
+table .number_move {
+  width: 60px;
+}
+
+table .role_move {
+  width: 50%;
+}
+
+.centered {
+  text-align: center;
+}
+
+table .list_number {
+  width: 24px;
+  height: 24px;
+  padding-top: 4px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+table .list_role {
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+}
+
+table tbody .rechts {
+  padding-right: 10px;
+}
+
+table .rechts {
+  text-align: right;
+}
+
+table .table-link {
+  font-weight: bold;
+}
+
+.table-order-center {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+}
+
+.center-header {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 15px auto 15px auto;
+  font-weight: bold;
+}
+
+.roster-name-td {
+  width: 160px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/*
+achievement-accomplished
+
+componente que mostra quando um jogador alcança um objectivo.
+
+Possiveis usos: notifications, match, feed
+ */
+
+.sc-achievement-accomplished {
+  display: inline-flex;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.sc-achievement-accomplished__logos {
+  width: 140px;
+  display: inline-block;
+  height: 60px;
+}
+
+.sc-achievement-accomplished__logos img {
+  width: 60px;
+  height: 60px;
+}
+
+.sc-achievement-accomplished__logos img:first-of-type {
+  margin-right: 10px;
+}
+
+.sc-achievement-accomplished__headings {
+  width: calc(100% - 140px);
+  display: inline-block;
+  border-left: 1px solid lightgray;
+  padding-left: 10px;
+}
+
+.sc-achievement-accomplished__headings h4 {
+  margin: 0px;
+  color: #337ab7;
+}
+
+.sc-achievement-accomplished__headings h4:hover {
+  color: #23527c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sc-achievement-accomplished__headings p {
+  margin: 0px;
+}
+
+/*
+MISC
+
+coisas transversais a toda a plataforma.
+ */
+
+.sc-rounded-image {
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.sc-squared-image {
+  object-fit: contain;
+}
+
+.row {
+  margin: 0 auto !important;
+  width: 1200px;
+}
+
+.mat-dialog-container{
+  padding: 0px !important; /* Override default padding */
+}
+
+.loading-page {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: auto;
+  height: fit-content;
+  position: fixed;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.loading-page img {
+  height: 100px;
+  width: auto;
+}
+
+.profile-team-info{
+  margin: 20px auto;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 150px;
+  width: 19%;
+  max-width: 240px;
+}
+
+.sticky-achievements {
+  position: fixed;
+  width: 28%;
+  max-width: 354.19px;
+}
+
+.sticky-indicators {
+  position: fixed;
+  top: 320px;
+}
+
+.hidden-for-footer {
+  display: none;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement
+  (as the navigation bar gets a new position at the top of the page
+  (position:fixed and top:0)
+*/
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.btn-success {
+  color: #ffffff !important;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.btn-danger {
+  color: #fff !important;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+/* Profile menu */
+
+.profile-menu .avatar {
+  margin-right: 24px;
+}
+
+.profile-menu {
+  width: calc(100% - 596.5px);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.header-row{
+  display: flex;
+  align-items: center;
+}
+
+.player-info {
+  float: left;
+  width: 39%;
+  line-height: 1;
+  padding-left: 1rem;
+}
+
+
+/* Toast messages classes */
+
+.toast-title {
+  font-weight: bold;
+}
+.toast-message {
+  word-wrap: break-word;
+}
+.toast-message a,
+.toast-message label {
+  color: #FFFFFF;
+}
+.toast-message a:hover {
+  color: #CCCCCC;
+  text-decoration: none;
+}
+.toast-close-button {
+  position: relative;
+  right: -0.3em;
+  top: -0.3em;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+  -webkit-text-shadow: 0 1px 0 #ffffff;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.8;
+}
+.toast-close-button:hover,
+.toast-close-button:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+}
+/*Additional properties for button version
+ iOS requires the button element instead of an anchor tag.
+ If you want the anchor version, it requires `href="#"`.*/
+button.toast-close-button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.toast-top-center {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-center {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-top-full-width {
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-bottom-full-width {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+.toast-top-left {
+  top: 12px;
+  left: 12px;
+}
+.toast-top-right {
+  right: 12px;
+  bottom: 12px;
+}
+.toast-bottom-right {
+  right: 12px;
+  bottom: 12px;
+}
+.toast-bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+#toast-container {
+  pointer-events: none;
+  position: fixed;
+  z-index: 99999;
+}
+#toast-container * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#toast-container > div {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 6px;
+  padding: 15px 15px 15px 50px;
+  width: 200px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  -moz-box-shadow: 0 0 12px #999999;
+  -webkit-box-shadow: 0 0 12px #999999;
+  box-shadow: 0 0 12px #999999;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+#toast-container > div.toast-custom {
+  padding: 15px;
+  color: #030303;
+}
+
+#toast-container > div.toast-custom .toast-close-button {
+  color: #999999 !important;
+}
+
+#toast-container > :hover {
+  -moz-box-shadow: 0 0 12px #000000;
+  -webkit-box-shadow: 0 0 12px #000000;
+  box-shadow: 0 0 12px #000000;
+  opacity: 1;
+  cursor: pointer;
+}
+#toast-container > .toast-info {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhLtZa9SgNBEMc9sUxxRcoUKSzSWIhXpFMhhYWFhaBg4yPYiWCXZxBLERsLRS3EQkEfwCKdjWJAwSKCgoKCcudv4O5YLrt7EzgXhiU3/4+b2ckmwVjJSpKkQ6wAi4gwhT+z3wRBcEz0yjSseUTrcRyfsHsXmD0AmbHOC9Ii8VImnuXBPglHpQ5wwSVM7sNnTG7Za4JwDdCjxyAiH3nyA2mtaTJufiDZ5dCaqlItILh1NHatfN5skvjx9Z38m69CgzuXmZgVrPIGE763Jx9qKsRozWYw6xOHdER+nn2KkO+Bb+UV5CBN6WC6QtBgbRVozrahAbmm6HtUsgtPC19tFdxXZYBOfkbmFJ1VaHA1VAHjd0pp70oTZzvR+EVrx2Ygfdsq6eu55BHYR8hlcki+n+kERUFG8BrA0BwjeAv2M8WLQBtcy+SD6fNsmnB3AlBLrgTtVW1c2QN4bVWLATaIS60J2Du5y1TiJgjSBvFVZgTmwCU+dAZFoPxGEEs8nyHC9Bwe2GvEJv2WXZb0vjdyFT4Cxk3e/kIqlOGoVLwwPevpYHT+00T+hWwXDf4AJAOUqWcDhbwAAAAASUVORK5CYII=") !important;
+}
+#toast-container > .toast-error {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVEhLrZa/SgNBEMZzh0WKCClSCKaIYOED+AAKeQQLG8HWztLCImBrYadgIdY+gIKNYkBFSwu7CAoqCgkkoGBI/E28PdbLZmeDLgzZzcx83/zZ2SSXC1j9fr+I1Hq93g2yxH4iwM1vkoBWAdxCmpzTxfkN2RcyZNaHFIkSo10+8kgxkXIURV5HGxTmFuc75B2RfQkpxHG8aAgaAFa0tAHqYFfQ7Iwe2yhODk8+J4C7yAoRTWI3w/4klGRgR4lO7Rpn9+gvMyWp+uxFh8+H+ARlgN1nJuJuQAYvNkEnwGFck18Er4q3egEc/oO+mhLdKgRyhdNFiacC0rlOCbhNVz4H9FnAYgDBvU3QIioZlJFLJtsoHYRDfiZoUyIxqCtRpVlANq0EU4dApjrtgezPFad5S19Wgjkc0hNVnuF4HjVA6C7QrSIbylB+oZe3aHgBsqlNqKYH48jXyJKMuAbiyVJ8KzaB3eRc0pg9VwQ4niFryI68qiOi3AbjwdsfnAtk0bCjTLJKr6mrD9g8iq/S/B81hguOMlQTnVyG40wAcjnmgsCNESDrjme7wfftP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=") !important;
+}
+#toast-container > .toast-success {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==") !important;
+}
+#toast-container > .toast-warning {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=") !important;
+}
+#toast-container.toast-top-center > div,
+#toast-container.toast-bottom-center > div {
+  width: 300px;
+  margin: auto;
+}
+#toast-container.toast-top-full-width > div,
+#toast-container.toast-bottom-full-width > div {
+  width: 96%;
+  margin: auto;
+}
+.toast {
+  background-color: #FFFFFF;
+  pointer-events: auto;
+}
+.toast-success {
+  background-color: #4383a882;
+}
+.toast-error {
+  background-color: #BD362F;
+}
+.toast-info {
+  background-color: #2F96B4;
+}
+.toast-warning {
+  background-color: #F89406;
+}
+
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
+.mat-form-field-underline {
+  display: none;
+}
+
+/*Responsive Design*/
+@media all and (max-width: 240px) {
+  #toast-container > div {
+    padding: 8px 8px 8px 50px;
+    width: 11em;
+  }
+  #toast-container .toast-close-button {
+    right: -0.2em;
+    top: -0.2em;
+  }
+}
+@media all and (min-width: 241px) and (max-width: 480px) {
+  #toast-container > div {
+    padding: 8px 8px 8px 50px;
+    width: 18em;
+  }
+  #toast-container .toast-close-button {
+    right: -0.2em;
+    top: -0.2em;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 768px) {
+  #toast-container > div {
+    padding: 15px 15px 15px 50px;
+    width: 25em;
+  }
+}
+
+.icon {
+  width: auto !important;
+  height: 15px !important;
+}
+
+.list_flag {
+  min-width: 14px;
+  max-width: 30px;
+  min-height: 9px;
+}

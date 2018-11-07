@@ -1,0 +1,298 @@
+<div *ngIf="viewModel" style="overflow: hidden">
+  <div class="player">
+    <div class="player-header" id="navbar">
+      <div class="row">
+        <div class="player-info">
+          <div class="team">
+            <a routerLink="/team/{{viewModel.current_season.team.team_id}}"
+               title="{{viewModel.current_season.team.id}}">
+              <img [src]="viewModel.current_season.team.avatar" [title]="viewModel.current_season.team.name"
+                   [alt]="viewModel.current_season.team.acronym">
+            </a>
+          </div>
+          <h1>
+            {{viewModel.current_season.personal_info.name}}
+          </h1>
+          <div class="player-team">
+            <a routerLink="/team" [title]="viewModel.current_season.team.name">
+              {{viewModel.current_season.team.name}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="player-header-placeholder"></div>
+  </div>
+
+  <div class="callout meta ">
+    <div class="row">
+      <div class="heading-buttons">
+        <button mat-raised-button class="sc-btn btn-success" (click)="save()">Salvar</button>
+        <button mat-raised-button class="sc-btn btn-danger" (click)="discard()">Descartar</button>
+      </div>
+      <div class="row-left">
+        <div class="player-image">
+          <img *ngIf="!cropperReady" [src]="viewModel.current_season.personal_info.avatar" alt="Profile image"
+               title="Profile" style="left: -241.5px;">
+          <img [src]="croppedImage"/>
+        </div>
+        <div class="profile-buttons">
+          <!-- <button mat-raised-button class="sc-btn btn-sc-default">Alterar</button> -->
+          <div>
+            <image-cropper
+              [imageChangedEvent]="imageChangedEvent"
+              [maintainAspectRatio]="true"
+              [aspectRatio]="3 / 4"
+              [resizeToWidth]="128"
+              [roundCropper]="false"
+              format="jpeg"
+              (imageCroppedBase64)="imageCroppedBase64($event)"
+              (imageCroppedFile)="imageCroppedFile($event)"
+              (imageLoaded)="imageLoaded()"
+              (loadImageFailed)="loadImageFailed()"
+              style="max-height: 33vh"
+              [style.display]="cropperReady ? null : 'none'"
+            ></image-cropper>
+          </div>
+          <div>
+            <input
+              type="file"
+              class="filestyle"
+              data-classButton="btn btn-primary"
+              data-input="false"
+              data-classIcon="icon-plus"
+              data-buttonText="Alterar"
+              (change)="fileChangeEvent($event)"/>
+          </div>
+        </div>
+      </div>
+      <div class="row-center-edit-mode centered">
+        <div>
+          <h2>Dados pessoais</h2>
+          <form [formGroup]="userDetailsForm">
+            <mat-form-field>
+              <input matInput placeholder="Nome completo" formControlName="name"
+                     [(ngModel)]="viewModel.current_season.personal_info.name"
+                     (change)="changedInput('name',$event, false)">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Altura" formControlName="height"
+                     [(ngModel)]="viewModel.current_season.personal_info.height"
+                     (change)="changedInput('height',$event, false)">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Peso" formControlName="weight"
+                     [(ngModel)]="viewModel.current_season.personal_info.weight"
+                     (change)="changedInput('weight',$event, false)">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Data de nascimento"
+                     formControlName="birthday">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-select formControlName="country" placeholder="País"
+                          (change)="changedInput('country',$event, false)">
+                <mat-option *ngFor="let country of countries"
+                            [value]="viewModel.current_season.personal_info.nationality">
+                  {{country}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-select formControlName="city" placeholder="Cidade"
+                          (change)="changedInput('city',$event, false)">
+                <mat-option *ngFor="let city of cities" [value]="viewModel.current_season.personal_info.residence">
+                  {{city}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-select formControlName="position" placeholder="Posição"
+                          (change)="changedInput('position',$event, false)">
+                <mat-option *ngFor="let position of positions"
+                            [value]="viewModel.current_season.personal_info.positions[0]">
+                  {{position}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-select formControlName="foot" placeholder="Pé dominante"
+                          (change)="changedInput('foot',$event, false)">
+                <mat-option *ngFor="let foot of feet" [value]="viewModel.current_season.personal_info.foot">
+                  {{foot}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </form>
+        </div>
+
+        <div id="top">
+          <h2>Estatística</h2>
+          <mat-form-field>
+            <mat-select [(ngModel)]="season.name" (change)="loadGames()" placeholder="Época">
+              <mat-option *ngFor="let season of seasons" [value]="season">
+                {{season.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div *ngIf="showGames && player_matches && player_matches.length > 0">
+          <div class="event-list">
+            <mat-accordion class="match-form">
+              <mat-expansion-panel *ngFor="let match of player_matches; let _idx = index"
+                                   (opened)="currentMatchIdx = _idx">
+                <mat-expansion-panel-header class="event-list__header">
+                  <mat-panel-title>
+                    {{match.date}}
+                  </mat-panel-title>
+                  <mat-panel-description class="match-description">
+
+                    <img *ngIf="match.isDataConfirmed" title="Dados validados pela SportsConnected" class="icon"
+                         src="/assets/valid_green.png">
+                    <img *ngIf="!match.isDataConfirmed" title="Dados não validados pela SportsConnected" class="icon"
+                         src="/assets/valid_gray.png">
+
+                    <small>{{match.competition_season.name}}</small>
+
+                    <img src="{{match.home_team.avatar}}">
+                    <h4>{{match.home_team.name}}</h4>
+                    <div class="info">
+
+                      {{match.home_team.goals}}
+                      -
+                      {{match.away_team.goals}}
+                    </div>
+
+                    <h4>{{match.away_team.name}}</h4>
+                    <img src="{{match.away_team.avatar}}">
+                    <div class="info">
+                      {{match.player_goals}}<img src="/assets/ball.png">
+                      {{match.player_assists}}<img src="/assets/boots.png">
+                      {{match.player_minutes_played}}<img src="/assets/clock.png">
+                      {{match.player_yellow_cards}}<img src="/assets/yellow.png">
+                      {{match.player_red_cards}}<img src="/assets/red.png">
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <mat-form-field>
+                  <input matInput ngModel="{{match.player_goals}}"
+                         (change)="changedInput('player_goals',$event, true)"
+                         placeholder="Golos" value="{{match.player_goals}}">
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput ngModel="{{match.player_assists}}"
+                         (change)="changedInput('player_assists',$event, true)"
+                         placeholder="Assistências" value="{{match.player_assists}}">
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput ngModel="{{match.player_yellow_cards}}"
+                         (change)="changedInput('player_yellow_cards',$event, true)"
+                         placeholder="Cartões Amarelo" value="{{match.player_yellow_cards}}">
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput ngModel="{{match.player_red_cards}}"
+                         (change)="changedInput('player_red_cards',$event, true)"
+                         placeholder="Cartões Vermelho" value="{{match.player_red_cards}}">
+                </mat-form-field>
+                <mat-form-field>
+                  <input matInput ngModel="{{match.player_minutes_played}}"
+                         (change)="changedInput('player_minutes_played',$event, true)"
+                         placeholder="Minutos jogados" value="{{match.player_minutes_played}}">
+                </mat-form-field>
+                <button mat-raised-button class="sc-btn btn-sc-default" (click)="goToMatch(match)">Ir para Jogo</button>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div [hidden]="viewModel" class="loading">
+  <img src="/assets/SP_Logo_Black.png" style="height: 100px; width: auto;">
+  <div class="bars">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>
+  <!--<div style="color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;">
+    Um jogo, um clique, o teu destino.
+  </div>-->
+  <style>
+    .loading {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .loading .bars {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .loading-bar {
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 4px;
+      animation: loading 1s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      background-color: #27ae60;
+      animation-delay: 0;
+    }
+
+    .loading-bar:nth-child(2) {
+      background-color: #f1c40f;
+      animation-delay: 0.09s;
+    }
+
+    .loading-bar:nth-child(3) {
+      background-color: #c0392b;
+      animation-delay: .18s;
+    }
+
+    .loading-bar:nth-child(4) {
+      background-color: #c0392b;
+      animation-delay: .27s;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1, 2.2);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</div>
+<script type="text/javascript" src="assets/js/bootstrap-filestyle.min.js"> </script>

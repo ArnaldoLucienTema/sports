@@ -1,0 +1,288 @@
+<div *ngIf="viewModel"  class="callout meta ">
+  <div class="row">
+    <div class="row-left">
+      <div class="player-image">
+        <img [src]="viewModel.current_season.personal_info.avatar" alt="Profile image"
+             title="Profile" style="left: -241.5px;">
+      </div>
+      <div class="profile-buttons">
+        <button *ngIf="!isFollowing && !isSessionUserProfile" mat-raised-button (click)="follow()" class="sc-automatic-btn btn-success">Seguir</button>
+        <button *ngIf="isFollowing && !isSessionUserProfile" mat-raised-button (click)="unfollow()" class="sc-automatic-btn btn-danger">Deixar de Seguir</button>
+        <button *ngIf="isSessionUserProfile" mat-icon-button>
+          <mat-icon aria-label="Clica para editar a tua conta" (click)="editPlayer()">edit</mat-icon>
+        </button>
+      </div>
+
+      <div class="indicators" id="indicators">
+        <div class="text"><strong>{{viewModel.followers.length}}</strong> Seguidores</div>
+        <div class="text"><strong>{{viewModel.recommendations.list.length}}</strong> Recomendações</div>
+      </div>
+
+      <div class="personal" id="personal">
+        <table class="col-md-12 personal-table">
+          <tbody class="auto-height">
+          <tr>
+            <td title="Idade">
+              <strong>Idade</strong>
+            </td>
+            <td class="">
+              {{viewModel.current_season.personal_info.age}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Posição">
+              <strong>Posição</strong>
+            </td>
+            <td class="">
+              {{viewModel.current_season.personal_info.positions[0]}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Pé dominante">
+              <strong>Pé dominante</strong>
+            </td>
+            <td class="">
+              {{viewModel.current_season.personal_info.foot}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Altura">
+              <strong>Altura</strong>
+            </td>
+            <td class="">
+              {{viewModel.current_season.personal_info.height}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Peso">
+              <strong>Peso</strong>
+            </td>
+            <td class="">
+              {{viewModel.current_season.personal_info.weight}}
+            </td>
+          </tr>
+          <tr>
+            <td title="Residência">
+              <strong>Residência</strong>
+            </td>
+            <td class="">
+              {{viewModel.current_season.personal_info.residence}}
+            </td>
+          </tr>
+          <tr>
+            <td class="last-td-padding" title="País">
+              <strong>País</strong>
+            </td>
+            <td class=" last-td-padding">
+              {{viewModel.current_season.personal_info.nationality}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-center">
+      <table class="sc-stats-table">
+        <tbody>
+        <tr class="table_header">
+          <th class="th-td-first">Liga</th>
+          <th>Jogos</th>
+          <th>Golos</th>
+          <th>Assis.</th>
+          <th>CA</th>
+          <th>CV</th>
+          <th>Min</th>
+          <th>Vitórias</th>
+          <th>Derrotas</th>
+          <th class="th-td-last">Empates</th>
+        </tr>
+        <tr class="tr-even">
+          <td>
+            <img class="league" src="{{viewModel.current_season.stats[0].avatar}}"
+                 alt="{{viewModel.current_season.stats[0].name}}">
+          </td>
+          <td>{{viewModel.current_season.stats[0].games}}</td>
+          <td>{{viewModel.current_season.stats[0].goals}}</td>
+          <td>{{viewModel.current_season.stats[0].assists}}</td>
+          <td>{{viewModel.current_season.stats[0].yellow_cards}}</td>
+          <td>{{viewModel.current_season.stats[0].red_cards}}</td>
+          <td>{{viewModel.current_season.stats[0].minutes_played}}''</td>
+          <td>{{viewModel.current_season.stats[0].wins}}</td>
+          <td>{{viewModel.current_season.stats[0].losses}}</td>
+          <td>{{viewModel.current_season.stats[0].draws}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="profile-buttons">
+        <button mat-fab class="button-image" (click)="voteSkill($event)" title="Força"
+                style=" background-image :url('/assets/strong.png');"></button>
+        <button mat-fab class="button-image" (click)="voteSkill($event)" title="Drible"
+                style=" background-image :url('/assets/dribble.png');"></button>
+        <button mat-fab class="button-image" (click)="voteSkill($event)" title="Rapidez"
+                style=" background-image :url('/assets/fast.png');"></button>
+        <button mat-fab class="button-image" (click)="voteSkill($event)" title="Goleador"
+                style=" background-image :url('/assets/scorer.png');"></button>
+        <button mat-fab class="button-image" (click)="voteSkill($event)" title="Passador"
+                style=" background-image :url('/assets/passer.png');"></button>
+        <button mat-fab class="button-image" (click)="voteSkill($event)" title="Muralha defensiva"
+                style=" background-image :url('/assets/defender.png');"></button>
+      </div>
+      <div class="skills">
+        <div class="data">
+          <div>
+            <canvas id="graph" class="chartjs-render-monitor sc-chart" ></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="sc-media">
+        <div *ngFor="let med of viewModel.current_season.media.slice(0,2)">
+          <div class="callout small articles-big">
+            <div class="video">
+              <iframe width="100%" height="360" src="//www.youtube.com/embed/8Z0sbekoQL4" frameborder="0"
+                      allowfullscreen=""></iframe>
+            </div>
+            <div class="description">
+              <p class="title">
+                <br>
+                <a href="/video/11523/" title="{{med.title}}">{{med.title}}</a>
+                <br>
+                {{med.text}}
+              </p>
+              <div class="authors">
+                <span class="author">{{med.author}}</span></div>
+              <div class="date">{{med.date}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="viewModel.recommendations.top_5.length > 0" class="recommendations">
+        <div class="content">
+          <div class="header">
+            <h3 class="title">Recomendações</h3>
+            <button mat-raised-button (click)="addRecommendation()" class="btn-recommend">Recomendar
+              {{viewModel.current_season.personal_info.name}}
+            </button>
+          </div>
+          <mat-card class="card-sc"
+                    *ngFor="let recommendation of viewModel.recommendations.top_5">
+            <mat-card-header>
+              <div mat-card-avatar class="profile-small-image"
+                   [ngStyle]="{'background-image':  'url(' + recommendation.author.avatar + ')' }"></div>
+              <mat-card-title class="headers">{{recommendation.author.name}}</mat-card-title>
+              <mat-card-subtitle class="headers">{{recommendation.author.team.name}}
+              </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                {{recommendation.text}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+          <div class="footer">
+            <button mat-button (click)="openRecommendationsDialog()" class="btn-see-more">Ver mais recomendações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-right">
+      <div class="achievements sticky-achievements" id="achievements">
+        <div class="content">
+          <div class="header">
+            <div *ngIf="viewModel.achievements && viewModel.achievements.length > 0">
+              <h3 class="title centered">Crachás de {{viewModel.current_season.personal_info.name}}</h3>
+              <div class="badges">
+                <div class="image" *ngFor="let achievement of viewModel.achievements">
+                  <img src="{{achievement.avatar}}">
+                </div>
+              </div>
+            </div>
+            <div *ngIf="!viewModel.achievements || viewModel.achievements.length == 0">
+              <h3 class="title centered">{{viewModel.current_season.personal_info.name}} não tem crachás</h3>
+            </div>
+          </div>
+          <!--<div *ngIf=" viewModel.achievements.length > 6 " class="footer">-->
+            <!--<button mat-button (click)="openRecommendationsDialog()" class="btn-see-more">Ver mais crachás</button>-->
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div [hidden]="viewModel" class="loading">
+  <img src="/assets/SP_Logo_Black.png" style="height: 100px; width: auto;">
+  <div class="bars">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+  </div>
+  <!--<div style="color: darkgrey; font-family: Museo Sans,sans-serif; font-size: 20px; margin: 20px auto;">
+    Um jogo, um clique, o teu destino.
+  </div>-->
+  <style>
+    .loading {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      text-align: center;
+      background-color: white;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .loading .bars {
+      margin: 20px auto;
+      width: 100%;
+    }
+
+    .loading-bar {
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      border-radius: 4px;
+      animation: loading 1s ease-in-out infinite;
+    }
+
+    .loading-bar:nth-child(1) {
+      background-color: #27ae60;
+      animation-delay: 0;
+    }
+
+    .loading-bar:nth-child(2) {
+      background-color: #f1c40f;
+      animation-delay: 0.09s;
+    }
+
+    .loading-bar:nth-child(3) {
+      background-color: #c0392b;
+      animation-delay: .18s;
+    }
+
+    .loading-bar:nth-child(4) {
+      background-color: #c0392b;
+      animation-delay: .27s;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(1);
+      }
+      20% {
+        transform: scale(1, 2.2);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</div>

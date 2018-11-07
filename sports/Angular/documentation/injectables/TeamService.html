@@ -1,0 +1,3494 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Players Net documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Players Net documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>TeamService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/_services/team.service.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#mockSearchTeams">mockSearchTeams</a>
+                            </li>
+                            <li>
+                                <a href="#mockTeams">mockTeams</a>
+                            </li>
+                            <li>
+                                <a href="#requestOptions">requestOptions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createRecommendation">createRecommendation</a>
+                            </li>
+                            <li>
+                                <a href="#getTeam">getTeam</a>
+                            </li>
+                            <li>
+                                <a href="#getTeamsByLeague">getTeamsByLeague</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#handleError">handleError</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="1405" class="link-to-prism">src/app/_services/team.service.ts:1405</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createRecommendation"></a>
+                        <span class="name">
+                            <b>
+                            createRecommendation
+                            </b>
+                            <a href="#createRecommendation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>createRecommendation(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, recommendation: <a href="../classes/Recommendation.html">Recommendation</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="1433" class="link-to-prism">src/app/_services/team.service.ts:1433</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+
+                                                </tr>
+                                                <tr>
+                                                        <td>recommendation</td>
+                                                        <td>
+                                                                    <code><a href="../classes/Recommendation.html" target="_self" >Recommendation</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/Recommendation.html" target="_self" >Observable&lt;Recommendation&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTeam"></a>
+                        <span class="name">
+                            <b>
+                            getTeam
+                            </b>
+                            <a href="#getTeam"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getTeam(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="1415" class="link-to-prism">src/app/_services/team.service.ts:1415</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../classes/TeamViewModel.html" target="_self" >Observable&lt;TeamViewModel&gt;</a></code>
+
+                            </div>
+                                <div class="io-description">
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTeamsByLeague"></a>
+                        <span class="name">
+                            <b>
+                            getTeamsByLeague
+                            </b>
+                            <a href="#getTeamsByLeague"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getTeamsByLeague(league: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="1454" class="link-to-prism">src/app/_services/team.service.ts:1454</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>league</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleError"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            handleError
+                            </b>
+                            <a href="#handleError"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>handleError(error: <a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank">HttpErrorResponse</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="1438" class="link-to-prism">src/app/_services/team.service.ts:1438</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>error</td>
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank" >HttpErrorResponse</a></code>
+                                                        </td>
+
+                                                    <td>
+                                                            No
+                                                    </td>
+
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mockSearchTeams"></a>
+                        <span class="name">
+                            <b>
+                            mockSearchTeams
+                            </b>
+                            <a href="#mockSearchTeams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>mockSearchTeams:     <code><a href="../classes/SearchEntityViewmodel.html" target="_self" >SearchEntityViewmodel[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/SearchEntityViewmodel.html" target="_self" >SearchEntityViewmodel[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      personal_info: {
+        name: &#x27;FC Porto&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1adf5accc36e448a750&#x27;,
+        acronym: &#x27;FCP&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&#x27;,
+        name: &#x27;FC Porto&#x27;,
+        full_name: &#x27;FC Porto&#x27;
+      },
+      _id: &#x27;5b69b1adf5accc36e448a750&#x27;,
+      user_info_id: &#x27;5b69b1adf5accc36e448a750&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Benfica&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/4_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1adf5accc36e448a754&#x27;,
+        acronym: &#x27;SLB&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/4_imgbank.png&#x27;,
+        name: &#x27;Benfica&#x27;,
+        full_name: &#x27;Benfica&#x27;
+      },
+      _id: &#x27;5b69b1adf5accc36e448a754&#x27;,
+      user_info_id: &#x27;5b69b1adf5accc36e448a754&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Sporting&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/16_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1b0f5accc36e448a758&#x27;,
+        acronym: &#x27;SFC&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/16_imgbank.png&#x27;,
+        name: &#x27;Sporting&#x27;,
+        full_name: &#x27;Sporting&#x27;
+      },
+      _id: &#x27;5b69b1b0f5accc36e448a758&#x27;,
+      user_info_id: &#x27;5b69b1b0f5accc36e448a758&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Braga&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/15_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1b0f5accc36e448a75c&#x27;,
+        acronym: &#x27;SCB&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/15_imgbank.png&#x27;,
+        name: &#x27;Braga&#x27;,
+        full_name: &#x27;Braga&#x27;
+      },
+      _id: &#x27;5b69b1b0f5accc36e448a75c&#x27;,
+      user_info_id: &#x27;5b69b1b0f5accc36e448a75c&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Rio Ave&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/31_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1b1f5accc36e448a760&#x27;,
+        acronym: &#x27;RAFC&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/31_imgbank.png&#x27;,
+        name: &#x27;Rio Ave&#x27;,
+        full_name: &#x27;Rio Ave&#x27;
+      },
+      user_info_id: &#x27;5b69b1b1f5accc36e448a760&#x27;,
+      _id: &#x27;5b69b1b1f5accc36e448a760&#x27;,
+      type: &#x27;teams&#x27;,
+    }
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="1323" class="link-to-prism">src/app/_services/team.service.ts:1323</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mockTeams"></a>
+                        <span class="name">
+                            <b>
+                            mockTeams
+                            </b>
+                            <a href="#mockTeams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>mockTeams:     <code><a href="../classes/TeamViewModel.html" target="_self" >TeamViewModel[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../classes/TeamViewModel.html" target="_self" >TeamViewModel[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[{
+    &quot;additional_info&quot;: {
+      &quot;sponsors&quot;: [{
+        link: &#x27;https://www.tripadvisor.pt/Restaurant_Review-g4995953-d12242638-Reviews-Mundet_Factory-Seixal_Lisbon_District_Central_Portugal.html&#x27;,
+        name: &#x27;Mundet Factory&#x27;
+      }],
+      &quot;other_sports&quot;: [&#x27;Basquetebol&#x27;, &#x27;Hóquei Patins&#x27;],
+      site: &#x27;www.seixalfc.pt&#x27;,
+      email: &#x27;seixalfc@seixal.pt&#x27;,
+      phone_number: &#x27;+351 214 444 294&#x27;,
+      address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+      president: &#x27;Maria Teresa Andrade&#x27;,
+      vice_president: &#x27;Manuel Coisinha&#x27;,
+      sports_director: &#x27;Caíta Moreira&#x27;,
+      number_of_teams: 5,
+      number_of_athletes: 134,
+      number_of_coaches: 8,
+      number_of_physiotherapists: 12,
+      number_of_grass_fields: 1,
+      number_of_synthetic_fields: 0,
+      number_of_locker_rooms: 5,
+    },
+    &quot;recommendations&quot;: {
+      &quot;list&quot;: [1, 2, 3, 4, 5, 6],
+      top_5: [{
+        author: {
+          name: &#x27;Arnaldo Tema&#x27;,
+          relationship: &#x27;Colega de equipa&#x27;,
+          id: &#x27;2&#x27;,
+          avatar: &#x27;https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/13781724_10205190140152111_6495749405499267870_n.jpg?_nc_cat=106&oh=c66e24c7f9b1ce391584fa0400b9414b&oe=5C545952&#x27;,
+          team: {
+            id: &#x27;1&#x27;,
+            acronym: &#x27;SFC&#x27;,
+            avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+            name: &#x27;Seixal FC&#x27;,
+          },
+        },
+        text: &#x27;Sed imperdiet tellus tristique, porttitor velit condimentum, bibendum augue. Maecenas sit amet libero et urna consequat ultrices ut sit amet nulla. Mauris quis neque ut lacus elementum tempus.&#x27;,
+      },
+        {
+          author: {
+            name: &#x27;Nuno Carmo&#x27;,
+            relationship: &#x27;Treinador&#x27;,
+            id: &#x27;3&#x27;,
+            avatar: &#x27;https://scontent.fopo3-1.fna.fbcdn.net/v/t31.0-8/15541052_10212069863200855_2889012374229061166_o.jpg?_nc_cat&#x3D;0&amp;oh&#x3D;5b128be1ebf4151ec5aa2afb671b72d0&amp;oe&#x3D;5B8C9375&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Maecenas tortor elit, fermentum non aliquam quis, bibendum nec urna. Cras euismod justo nec nisl ullamcorper, eget gravida tellus tincidunt. Aliquam quis leo ligula.&#x27;,
+        },
+        {
+          author: {
+            name: &#x27;Vital de Carvalho&#x27;,
+            id: &#x27;4&#x27;,
+            relationship: &#x27;Jogador&#x27;,
+            avatar: &#x27;https://openminds.swissre.com/static//images/profile-default.png&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Duis eu maximus nibh, in consequat dui. Suspendisse porttitor elit et turpis faucibus volutpat. Nunc et mi luctus, vehicula eros team_id, tincidunt ante.&#x27;,
+        },
+        {
+          author: {
+            name: &#x27;José Mourinho&#x27;,
+            relationship: &#x27;Treinador&#x27;,
+            id: &#x27;5&#x27;,
+            avatar: &#x27;https://cdn.images.dailystar.co.uk/dynamic/58/photos/763000/620x/Jose-Mourinho-644644.jpg&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Cras vehicula diam team_id massa tempus sodales. Mauris gravida nunc sed pulvinar ornare. Quisque eu pulvinar augue. Curabitur a rutrum metus. Nam mattis, quam ut varius suscipit, lacus lorem sodales diam, ac fermentum quam nulla a orci. Aenean team_id tincidunt ex, sit amet commodo ligula. Nulla dui mi, consectetur sit amet justo sed, aliquam dictum mi. Aenean sit amet cursus enim.&#x27;,
+        },
+        {
+          author: {
+            name: &#x27;Jorge Jesus&#x27;,
+            relationship: &#x27;Treinador&#x27;,
+            id: &#x27;6&#x27;,
+            avatar: &#x27;https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Jorge_Jesus.jpg/1200px-Jorge_Jesus.jpg&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Nunc interdum, mauris ut pharetra elementum, mauris nunc blandit augue, nec semper arcu risus ac orci. Curabitur sit amet mauris vel erat faucibus fringilla in vel ligula.&#x27;,
+        }
+      ],
+    },
+    &quot;external_ids&quot;: {
+      &quot;zerozero&quot;: &quot;9&quot;
+    },
+    &quot;previous_seasons&quot;: [],
+    &quot;tryouts&quot;: [
+      {
+        address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+        age_group: &#x27;Séniores&#x27;,
+        days: &#x27;6, 7, 10 de Agosto&#x27;,
+        time: &#x27;20h30&#x27;,
+        requirements: &#x27;Devem vir acompanhados do c. cidadão&#x27;,
+      },
+      {
+        address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+        age_group: &#x27;Juniores 1999-2001&#x27;,
+        days: &#x27;9, 13, 14 de Agosto&#x27;,
+        time: &#x27;18h30&#x27;,
+        requirements: &#x27;Devem vir acompanhados do c. cidadão&#x27;,
+      },
+      {
+        address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+        age_group: &#x27;Infantis 2005-2006&#x27;,
+        days: &#x27;6, 7, 10 de Agosto&#x27;,
+        time: &#x27;18h00&#x27;,
+        requirements: &#x27;Devem vir acompanhados do c. cidadão&#x27;,
+      }
+    ],
+    followers: [&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;10&#x27;, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;10&#x27;, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;10&#x27;],
+    &quot;_id&quot;: &quot;5b69b1adf5accc36e448a750&quot;,
+    &quot;acronym&quot;: &quot;FC Porto&quot;,
+    &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+    &quot;full_name&quot;: &quot;&quot;,
+    &quot;name&quot;: &quot;FC Porto&quot;,
+    &quot;current_season&quot;: {
+      &quot;external_ids&quot;: {
+        &quot;zerozero&quot;: &quot;9&quot;
+      },
+      &quot;standings&quot;: [
+        {
+          &quot;position&quot;: 1,
+          &quot;matches&quot;: 17,
+          &quot;wins&quot;: 16,
+          &quot;draws&quot;: 1,
+          &quot;losses&quot;: 0,
+          &quot;goals&quot;: 53,
+          &quot;goals_taken&quot;: 10,
+          &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+          &quot;competition_id&quot;: &quot;5b69b1a3f5accc36e448a74d&quot;,
+          &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+          &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;,
+          &quot;_id&quot;: &quot;5b69b1adf5accc36e448a752&quot;
+        }
+      ],
+      &quot;matches&quot;: [
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 4
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b7f5accc36e448a795&quot;,
+            &quot;name&quot;: &quot;Estoril Praia&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/1734_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b42bf5accc36e448b6cf&quot;,
+          &quot;date&quot;: &quot;2017-08-09T18:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b42bf5accc36e448b6d1&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b6f5accc36e448a789&quot;,
+            &quot;name&quot;: &quot;Moreirense&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/6_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b440f5accc36e448bbdb&quot;,
+          &quot;date&quot;: &quot;2017-08-20T17:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b440f5accc36e448bbdd&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b1f5accc36e448a765&quot;,
+            &quot;name&quot;: &quot;Chaves&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/20_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b457f5accc36e448c0e7&quot;,
+          &quot;date&quot;: &quot;2017-09-09T19:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b457f5accc36e448c0e9&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 5
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b3f5accc36e448a775&quot;,
+            &quot;name&quot;: &quot;Portimonense&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/33_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;id&quot;: &quot;5b69b464f5accc36e448c50e&quot;,
+          &quot;date&quot;: &quot;2017-09-22T19:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b464f5accc36e448c510&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 6
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b7f5accc36e448a791&quot;,
+            &quot;name&quot;: &quot;Paços Ferreira&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/13_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b47ff5accc36e448cb49&quot;,
+          &quot;date&quot;: &quot;2017-10-21T19:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b47ff5accc36e448cb4b&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b4f5accc36e448a77d&quot;,
+            &quot;name&quot;: &quot;Belenenses&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/3_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b49bf5accc36e448d0ed&quot;,
+          &quot;date&quot;: &quot;2017-11-04T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b49cf5accc36e448d0ef&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a755&quot;,
+            &quot;name&quot;: &quot;Benfica&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/4_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b4abf5accc36e448d561&quot;,
+          &quot;date&quot;: &quot;2017-12-01T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4acf5accc36e448d563&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b2f5accc36e448a769&quot;,
+            &quot;name&quot;: &quot;Marítimo&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/12_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b4cff5accc36e448dccd&quot;,
+          &quot;date&quot;: &quot;2017-12-18T21:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4cff5accc36e448dccf&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 4
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b3f5accc36e448a771&quot;,
+            &quot;name&quot;: &quot;V. Guimarães&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/18_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;id&quot;: &quot;5b69b4e4f5accc36e448e0f5&quot;,
+          &quot;date&quot;: &quot;2018-01-07T20:15:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4e4f5accc36e448e0f7&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b4f5accc36e448a779&quot;,
+            &quot;name&quot;: &quot;Tondela&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/4336_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b4f3f5accc36e448e51d&quot;,
+          &quot;date&quot;: &quot;2018-01-19T21:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4f3f5accc36e448e51f&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b0f5accc36e448a75d&quot;,
+            &quot;name&quot;: &quot;Braga&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/15_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b509f5accc36e448ea73&quot;,
+          &quot;date&quot;: &quot;2018-02-03T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b509f5accc36e448ea75&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 5
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b1f5accc36e448a761&quot;,
+            &quot;name&quot;: &quot;Rio Ave&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/31_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b525f5accc36e448f147&quot;,
+          &quot;date&quot;: &quot;2018-02-18T18:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b525f5accc36e448f149&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b0f5accc36e448a759&quot;,
+            &quot;name&quot;: &quot;Sporting&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/16_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b537f5accc36e448f531&quot;,
+          &quot;date&quot;: &quot;2018-03-02T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b538f5accc36e448f533&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b2f5accc36e448a76d&quot;,
+            &quot;name&quot;: &quot;Boavista&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/5_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b558f5accc36e448fbb7&quot;,
+          &quot;date&quot;: &quot;2018-03-17T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b558f5accc36e448fbb9&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b5f5accc36e448a781&quot;,
+            &quot;name&quot;: &quot;Desp. Aves&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/7_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b576f5accc36e44901a3&quot;,
+          &quot;date&quot;: &quot;2018-04-08T17:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b576f5accc36e44901a5&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 5
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b5f5accc36e448a785&quot;,
+            &quot;name&quot;: &quot;V. Setúbal&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/35_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b598f5accc36e4490793&quot;,
+          &quot;date&quot;: &quot;2018-04-23T19:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b598f5accc36e4490795&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b6f5accc36e448a78d&quot;,
+            &quot;name&quot;: &quot;Feirense&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/1728_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b5aef5accc36e4490c9f&quot;,
+          &quot;date&quot;: &quot;2018-05-06T19:15:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b5aef5accc36e4490ca1&quot;
+        }
+      ],
+      &quot;players&quot;: [
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1b8f5accc36e448a799&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1b8f5accc36e448a798&quot;,
+          &quot;name&quot;: &quot;Iker Casillas Fernández&quot;,
+          &quot;number&quot;: &quot;1&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/03/1003_20180803164212_iker_casillas.png&quot;,
+          &quot;nationality&quot;: &quot;Espanha&quot;,
+          &quot;_id&quot;: &quot;5b69b1b8f5accc36e448a79a&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1b9f5accc36e448a79e&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1b9f5accc36e448a79d&quot;,
+          &quot;name&quot;: &quot;José Pedro Malheiro de Sá&quot;,
+          &quot;number&quot;: &quot;12&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/60/164860_20180803164215_jose_sa.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1b9f5accc36e448a79f&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1b9f5accc36e448a7a3&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1b9f5accc36e448a7a2&quot;,
+          &quot;name&quot;: &quot;João Paulo Santos da Costa&quot;,
+          &quot;number&quot;: &quot;24&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/94/160894_20180526125001_joao_costa.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1b9f5accc36e448a7a4&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1baf5accc36e448a7a8&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1baf5accc36e448a7a7&quot;,
+          &quot;name&quot;: &quot;Vanailson Luciano de Souza Alves&quot;,
+          &quot;number&quot;: &quot;26&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/28/241528_20180803164216_vana_alves.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1baf5accc36e448a7a9&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1baf5accc36e448a7ad&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1baf5accc36e448a7ac&quot;,
+          &quot;name&quot;: &quot;Fabiano Ribeiro de Freitas&quot;,
+          &quot;number&quot;: &quot;40&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/51/39151_20180803164218_fabiano.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1baf5accc36e448a7ae&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bbf5accc36e448a7b2&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bbf5accc36e448a7b1&quot;,
+          &quot;name&quot;: &quot;Luís Rafael Soares Alves&quot;,
+          &quot;number&quot;: &quot;-&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/18/105518_20180731180922_rafa_soares.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1bbf5accc36e448a7b3&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bbf5accc36e448a7b7&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bbf5accc36e448a7b6&quot;,
+          &quot;name&quot;: &quot;Victorio Maximiliano Pereira Páez&quot;,
+          &quot;number&quot;: &quot;2&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/64/34664_20180803164414_maxi_pereira.png&quot;,
+          &quot;nationality&quot;: &quot;Uruguai&quot;,
+          &quot;_id&quot;: &quot;5b69b1bbf5accc36e448a7b8&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bcf5accc36e448a7bc&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bcf5accc36e448a7bb&quot;,
+          &quot;name&quot;: &quot;Yordán Hernando Osorio Paredes&quot;,
+          &quot;number&quot;: &quot;4&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/35/404035_20180731182037_yordan_osorio.png&quot;,
+          &quot;nationality&quot;: &quot;Venezuela&quot;,
+          &quot;_id&quot;: &quot;5b69b1bcf5accc36e448a7bd&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bcf5accc36e448a7c1&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bcf5accc36e448a7c0&quot;,
+          &quot;name&quot;: &quot;Iván Marcano Sierra&quot;,
+          &quot;number&quot;: &quot;5&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/73/36773_20180613195208_ivan_marcano.jpg&quot;,
+          &quot;nationality&quot;: &quot;Espanha&quot;,
+          &quot;_id&quot;: &quot;5b69b1bdf5accc36e448a7c2&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bdf5accc36e448a7c6&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bdf5accc36e448a7c5&quot;,
+          &quot;name&quot;: &quot;Alex Nicolao Telles&quot;,
+          &quot;number&quot;: &quot;13&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/39/176439_20180803164419_alex_telles.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1bdf5accc36e448a7c7&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;,
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bef5accc36e448a7cb&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bef5accc36e448a7ca&quot;,
+          &quot;name&quot;: &quot;Miguel Arturo Layún Prado&quot;,
+          &quot;number&quot;: &quot;19&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/51/106851_20180614125648_miguel_layun.jpg&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1bef5accc36e448a7cc&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bef5accc36e448a7d0&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bef5accc36e448a7cf&quot;,
+          &quot;name&quot;: &quot;Ricardo Domingos Barbosa Pereira&quot;,
+          &quot;number&quot;: &quot;21&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/79/56579_20180613112949_ricardo_pereira.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1bef5accc36e448a7d1&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;,
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bff5accc36e448a7d5&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bff5accc36e448a7d4&quot;,
+          &quot;name&quot;: &quot;Diego Antonio Reyes Rosales&quot;,
+          &quot;number&quot;: &quot;23&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/17/163617_20180613195452_diego_reyes.png&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1bff5accc36e448a7d6&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bff5accc36e448a7da&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bff5accc36e448a7d9&quot;,
+          &quot;name&quot;: &quot;Felipe Augusto de Almeida Monteiro &quot;,
+          &quot;number&quot;: &quot;28&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/45/176145_20180803164427_felipe.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1bff5accc36e448a7db&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;,
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c0f5accc36e448a7df&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c0f5accc36e448a7de&quot;,
+          &quot;name&quot;: &quot;José Diogo Dalot Teixeira&quot;,
+          &quot;number&quot;: &quot;30&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/16/284416_20180606144230_diogo_dalot.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1c0f5accc36e448a7e0&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c0f5accc36e448a7e4&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c0f5accc36e448a7e3&quot;,
+          &quot;name&quot;: &quot;Jorge Filipe Oliveira Fernandes&quot;,
+          &quot;number&quot;: &quot;44&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/41/216241_20180622172526_jorge_fernandes.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1c0f5accc36e448a7e5&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Esquerdo)&quot;,
+            &quot;Médio (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c1f5accc36e448a7e9&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c1f5accc36e448a7e8&quot;,
+          &quot;name&quot;: &quot;Luís Carlos Machado Mata&quot;,
+          &quot;number&quot;: &quot;55&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/33/216233_20180519110525_luis_mata.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1c1f5accc36e448a7ea&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c2f5accc36e448a7ee&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c2f5accc36e448a7ed&quot;,
+          &quot;name&quot;: &quot;Paulo Henrique Soares dos Santos&quot;,
+          &quot;number&quot;: &quot;6&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/39/240739_20180608202049_paulinho.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1c2f5accc36e448a7ef&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c3f5accc36e448a7f3&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c3f5accc36e448a7f2&quot;,
+          &quot;name&quot;: &quot;Óliver Torres Muñoz&quot;,
+          &quot;number&quot;: &quot;10&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/81/260081_20180803164624_oliver_torres.png&quot;,
+          &quot;nationality&quot;: &quot;Espanha&quot;,
+          &quot;_id&quot;: &quot;5b69b1c3f5accc36e448a7f4&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Centro)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c4f5accc36e448a7f8&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c4f5accc36e448a7f7&quot;,
+          &quot;name&quot;: &quot;Héctor Miguel Herrera López &quot;,
+          &quot;number&quot;: &quot;16&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/35/211935_20180803164626_hector_herrera.png&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1c4f5accc36e448a7f9&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Centro)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cbf5accc36e448a7fd&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cbf5accc36e448a7fc&quot;,
+          &quot;name&quot;: &quot;André Filipe Brás André&quot;,
+          &quot;number&quot;: &quot;20&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/73/31173_20180731183335_andre_andre.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cbf5accc36e448a7fe&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cbf5accc36e448a802&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cbf5accc36e448a801&quot;,
+          &quot;name&quot;: &quot;Danilo Luís Hélio Pereira&quot;,
+          &quot;number&quot;: &quot;22&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/22/74722_20180803164627_danilo_pereira.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cbf5accc36e448a803&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1ccf5accc36e448a807&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1ccf5accc36e448a806&quot;,
+          &quot;name&quot;: &quot;Otávio Edmilson da Silva Monteiro&quot;,
+          &quot;number&quot;: &quot;25&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/60/276060_20180803164629_otavio.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1ccf5accc36e448a808&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1ccf5accc36e448a80c&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1ccf5accc36e448a80b&quot;,
+          &quot;name&quot;: &quot;Sérgio Miguel Relvas de Oliveira&quot;,
+          &quot;number&quot;: &quot;27&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/43/74743_20180803164631_sergio_oliveira.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1ccf5accc36e448a80d&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cdf5accc36e448a811&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cdf5accc36e448a810&quot;,
+          &quot;name&quot;: &quot;Luiz Gustavo Novaes Palhares&quot;,
+          &quot;number&quot;: &quot;50&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/66/547866_20180519110715_luizao.jpg&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1cdf5accc36e448a812&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;,
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cdf5accc36e448a816&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cdf5accc36e448a815&quot;,
+          &quot;name&quot;: &quot;Rui Filipe Araújo Moreira&quot;,
+          &quot;number&quot;: &quot;60&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/62/96062_20180519110802_rui_moreira.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cdf5accc36e448a817&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cef5accc36e448a81b&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cdf5accc36e448a81a&quot;,
+          &quot;name&quot;: &quot;Federico Nicolás Varela&quot;,
+          &quot;number&quot;: &quot;68&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/67/446667_20180730135436_fede_varela.jpg&quot;,
+          &quot;nationality&quot;: &quot;Argentina&quot;,
+          &quot;_id&quot;: &quot;5b69b1cef5accc36e448a81c&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Direito)&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cef5accc36e448a820&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cef5accc36e448a81f&quot;,
+          &quot;name&quot;: &quot;Hernâni Jorge Santos Fortes&quot;,
+          &quot;number&quot;: &quot;7&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/04/159904_20180803164856_hernani.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cef5accc36e448a821&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Esquerdo)&quot;,
+            &quot;Médio (Médio Ofensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cff5accc36e448a825&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cff5accc36e448a824&quot;,
+          &quot;name&quot;: &quot;Yacine Nasr Eddine Brahimi&quot;,
+          &quot;number&quot;: &quot;8&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/07/64507_20180803164856_yacine_brahimi.png&quot;,
+          &quot;nationality&quot;: &quot;Argélia&quot;,
+          &quot;_id&quot;: &quot;5b69b1cff5accc36e448a826&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d0f5accc36e448a82a&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cff5accc36e448a829&quot;,
+          &quot;name&quot;: &quot;Vincent Aboubakar&quot;,
+          &quot;number&quot;: &quot;9&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/45/141345_20180803164856_vincent_aboubakar.png&quot;,
+          &quot;nationality&quot;: &quot;Camarões&quot;,
+          &quot;_id&quot;: &quot;5b69b1d0f5accc36e448a82b&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d0f5accc36e448a82f&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d0f5accc36e448a82e&quot;,
+          &quot;name&quot;: &quot;Moussa Marega&quot;,
+          &quot;number&quot;: &quot;11&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/01/280401_20180803164859_moussa_marega.png&quot;,
+          &quot;nationality&quot;: &quot;Mali&quot;,
+          &quot;_id&quot;: &quot;5b69b1d0f5accc36e448a830&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d1f5accc36e448a834&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d1f5accc36e448a833&quot;,
+          &quot;name&quot;: &quot;Gonçalo Mendes Paciência&quot;,
+          &quot;number&quot;: &quot;14&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/94/74894_20180712133107_goncalo_paciencia.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d1f5accc36e448a835&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Direito)&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d1f5accc36e448a839&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d1f5accc36e448a838&quot;,
+          &quot;name&quot;: &quot;Jesús Manuel Corona Ruíz&quot;,
+          &quot;number&quot;: &quot;17&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/94/155294_20180803164904_jesus_corona.png&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1d2f5accc36e448a83a&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d2f5accc36e448a83e&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d2f5accc36e448a83d&quot;,
+          &quot;name&quot;: &quot;Abdul Majeed Waris&quot;,
+          &quot;number&quot;: &quot;18&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/97/134497_20180608202118_majeed_waris.png&quot;,
+          &quot;nationality&quot;: &quot;Gana&quot;,
+          &quot;_id&quot;: &quot;5b69b1d2f5accc36e448a83f&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d2f5accc36e448a843&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d2f5accc36e448a842&quot;,
+          &quot;name&quot;: &quot;Francisco das Chagas Soares dos Santos&quot;,
+          &quot;number&quot;: &quot;29&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/70/137670_20180803164909_soares.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1d2f5accc36e448a844&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d3f5accc36e448a848&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d3f5accc36e448a847&quot;,
+          &quot;name&quot;: &quot;Rui Pedro da Silva e Sousa&quot;,
+          &quot;number&quot;: &quot;33&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/35/284035_20180603014314_rui_pedro.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d3f5accc36e448a849&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Centro)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d3f5accc36e448a84d&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d3f5accc36e448a84c&quot;,
+          &quot;name&quot;: &quot;Bruno Xavier Almeida Costa&quot;,
+          &quot;number&quot;: &quot;87&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/11/284011_20180803164623_bruno_costa.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d4f5accc36e448a84e&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Esquerdo)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d4f5accc36e448a852&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d4f5accc36e448a851&quot;,
+          &quot;name&quot;: &quot;Wenderson Rodrigues do Nascimento Galeno&quot;,
+          &quot;number&quot;: &quot;90&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/90/505790_20180725200454_wenderson_galeno.jpg&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1d4f5accc36e448a853&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d5f5accc36e448a857&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d5f5accc36e448a856&quot;,
+          &quot;name&quot;: &quot;André Filipe Ferreira Coelho Pereira&quot;,
+          &quot;number&quot;: &quot;95&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/15/217215_20180803164908_andre_pereira.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d5f5accc36e448a858&quot;
+        }
+      ],
+      &quot;staff&quot;: [
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;5&#x27;,
+          user_info_id: &#x27;5&#x27;,
+          name: &#x27;José Mourinho&#x27;,
+          avatar: &#x27;https://cdn.images.dailystar.co.uk/dynamic/58/photos/763000/620x/Jose-Mourinho-644644.jpg&#x27;,
+          position: &#x27;Treinador principal&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;6&#x27;,
+          user_info_id: &#x27;6&#x27;,
+          name: &#x27;Jorge Jesus&#x27;,
+          avatar: &#x27;https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Jorge_Jesus.jpg/1200px-Jorge_Jesus.jpg&#x27;,
+          position: &#x27;Treinador adjunto&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;4&#x27;,
+          user_info_id: &#x27;4&#x27;,
+          name: &#x27;Vital de Carvalho&#x27;,
+          avatar: &#x27;https://openminds.swissre.com/static//images/profile-default.png&#x27;,
+          position: &#x27;Treinador adjunto&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;3&#x27;,
+          user_info_id: &#x27;3&#x27;,
+          name: &#x27;Nuno Carmo&#x27;,
+          avatar: &#x27;https://scontent.fopo3-1.fna.fbcdn.net/v/t31.0-8/15541052_10212069863200855_2889012374229061166_o.jpg?_nc_cat&#x3D;0&amp;oh&#x3D;5b128be1ebf4151ec5aa2afb671b72d0&amp;oe&#x3D;5B8C9375&#x27;,
+          position: &#x27;Preparador físico&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+      ],
+      &quot;media&quot;: [
+        {
+          title: &#x27;Arnaldo Tema marca Hat-trick em jogo decisivo&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;08-05-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 53,
+          shares: 8,
+          likes: 20,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;2&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Arnaldo faz 25 anos!&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;27-08-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 1200,
+          shares: 12,
+          likes: 0,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci.&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Melhores momentos&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;08-09-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 93,
+          shares: 45,
+          likes: 90,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;15 Golos em 10 jogos.&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;03-11-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 200,
+          shares: 12,
+          likes: 20,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Campeão da Supermacia&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;08-02-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 2,
+          shares: 0,
+          likes: 0,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Diogo falha final da Taça de Portugal&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;28-05-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 40,
+          shares: 40,
+          likes: 13,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+
+      ],
+      &quot;_id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+      &quot;season_id&quot;: &quot;5b69b1a8f5accc36e448a74e&quot;,
+      &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+      &quot;name&quot;: &quot;FC Porto&quot;,
+      &quot;team_id&quot;: &quot;5b69b1adf5accc36e448a750&quot;
+    }
+  }]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/_services/team.service.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="requestOptions"></a>
+                        <span class="name">
+                            <b>
+                            requestOptions
+                            </b>
+                            <a href="#requestOptions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>requestOptions:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="1405" class="link-to-prism">src/app/_services/team.service.ts:1405</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Injectable} from &#x27;@angular/core&#x27;;
+import {Observable} from &#x27;rxjs/Observable&#x27;;
+import {of} from &#x27;rxjs/observable/of&#x27;;
+import {AuthenticationService} from &#x27;./authentication.service&#x27;;
+import {HttpClient, HttpHeaders, HttpErrorResponse, HttpParams} from &#x27;@angular/common/http&#x27;;
+import {ErrorObservable} from &#x27;rxjs/observable/ErrorObservable&#x27;;
+import {catchError, retry, tap} from &#x27;rxjs/operators&#x27;;
+import {TeamViewModel} from &#x27;../_models/team_viewmodel&#x27;;
+import {Recommendation} from &#x27;../_models/recommendation&#x27;;
+import {SearchEntityViewmodel} from &quot;../_models/search_entity_viewmodel&quot;;
+
+@Injectable()
+export class TeamService {
+
+  mockTeams: TeamViewModel[] &#x3D; [{
+    &quot;additional_info&quot;: {
+      &quot;sponsors&quot;: [{
+        link: &#x27;https://www.tripadvisor.pt/Restaurant_Review-g4995953-d12242638-Reviews-Mundet_Factory-Seixal_Lisbon_District_Central_Portugal.html&#x27;,
+        name: &#x27;Mundet Factory&#x27;
+      }],
+      &quot;other_sports&quot;: [&#x27;Basquetebol&#x27;, &#x27;Hóquei Patins&#x27;],
+      site: &#x27;www.seixalfc.pt&#x27;,
+      email: &#x27;seixalfc@seixal.pt&#x27;,
+      phone_number: &#x27;+351 214 444 294&#x27;,
+      address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+      president: &#x27;Maria Teresa Andrade&#x27;,
+      vice_president: &#x27;Manuel Coisinha&#x27;,
+      sports_director: &#x27;Caíta Moreira&#x27;,
+      number_of_teams: 5,
+      number_of_athletes: 134,
+      number_of_coaches: 8,
+      number_of_physiotherapists: 12,
+      number_of_grass_fields: 1,
+      number_of_synthetic_fields: 0,
+      number_of_locker_rooms: 5,
+    },
+    &quot;recommendations&quot;: {
+      &quot;list&quot;: [1, 2, 3, 4, 5, 6],
+      top_5: [{
+        author: {
+          name: &#x27;Arnaldo Tema&#x27;,
+          relationship: &#x27;Colega de equipa&#x27;,
+          id: &#x27;2&#x27;,
+          avatar: &#x27;https://scontent.flis6-1.fna.fbcdn.net/v/t1.0-9/13781724_10205190140152111_6495749405499267870_n.jpg?_nc_cat=106&oh=c66e24c7f9b1ce391584fa0400b9414b&oe=5C545952&#x27;,
+          team: {
+            id: &#x27;1&#x27;,
+            acronym: &#x27;SFC&#x27;,
+            avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+            name: &#x27;Seixal FC&#x27;,
+          },
+        },
+        text: &#x27;Sed imperdiet tellus tristique, porttitor velit condimentum, bibendum augue. Maecenas sit amet libero et urna consequat ultrices ut sit amet nulla. Mauris quis neque ut lacus elementum tempus.&#x27;,
+      },
+        {
+          author: {
+            name: &#x27;Nuno Carmo&#x27;,
+            relationship: &#x27;Treinador&#x27;,
+            id: &#x27;3&#x27;,
+            avatar: &#x27;https://scontent.fopo3-1.fna.fbcdn.net/v/t31.0-8/15541052_10212069863200855_2889012374229061166_o.jpg?_nc_cat&#x3D;0&amp;oh&#x3D;5b128be1ebf4151ec5aa2afb671b72d0&amp;oe&#x3D;5B8C9375&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Maecenas tortor elit, fermentum non aliquam quis, bibendum nec urna. Cras euismod justo nec nisl ullamcorper, eget gravida tellus tincidunt. Aliquam quis leo ligula.&#x27;,
+        },
+        {
+          author: {
+            name: &#x27;Vital de Carvalho&#x27;,
+            id: &#x27;4&#x27;,
+            relationship: &#x27;Jogador&#x27;,
+            avatar: &#x27;https://openminds.swissre.com/static//images/profile-default.png&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Duis eu maximus nibh, in consequat dui. Suspendisse porttitor elit et turpis faucibus volutpat. Nunc et mi luctus, vehicula eros team_id, tincidunt ante.&#x27;,
+        },
+        {
+          author: {
+            name: &#x27;José Mourinho&#x27;,
+            relationship: &#x27;Treinador&#x27;,
+            id: &#x27;5&#x27;,
+            avatar: &#x27;https://cdn.images.dailystar.co.uk/dynamic/58/photos/763000/620x/Jose-Mourinho-644644.jpg&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Cras vehicula diam team_id massa tempus sodales. Mauris gravida nunc sed pulvinar ornare. Quisque eu pulvinar augue. Curabitur a rutrum metus. Nam mattis, quam ut varius suscipit, lacus lorem sodales diam, ac fermentum quam nulla a orci. Aenean team_id tincidunt ex, sit amet commodo ligula. Nulla dui mi, consectetur sit amet justo sed, aliquam dictum mi. Aenean sit amet cursus enim.&#x27;,
+        },
+        {
+          author: {
+            name: &#x27;Jorge Jesus&#x27;,
+            relationship: &#x27;Treinador&#x27;,
+            id: &#x27;6&#x27;,
+            avatar: &#x27;https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Jorge_Jesus.jpg/1200px-Jorge_Jesus.jpg&#x27;,
+            team: {
+              id: &#x27;1&#x27;,
+              acronym: &#x27;SFC&#x27;,
+              avatar: &#x27;https://seeklogo.com/images/S/seixal-cf-logo-C94D57D780-seeklogo.com.png&#x27;,
+              name: &#x27;Seixal FC&#x27;,
+            },
+          },
+          text: &#x27;Nunc interdum, mauris ut pharetra elementum, mauris nunc blandit augue, nec semper arcu risus ac orci. Curabitur sit amet mauris vel erat faucibus fringilla in vel ligula.&#x27;,
+        }
+      ],
+    },
+    &quot;external_ids&quot;: {
+      &quot;zerozero&quot;: &quot;9&quot;
+    },
+    &quot;previous_seasons&quot;: [],
+    &quot;tryouts&quot;: [
+      {
+        address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+        age_group: &#x27;Séniores&#x27;,
+        days: &#x27;6, 7, 10 de Agosto&#x27;,
+        time: &#x27;20h30&#x27;,
+        requirements: &#x27;Devem vir acompanhados do c. cidadão&#x27;,
+      },
+      {
+        address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+        age_group: &#x27;Juniores 1999-2001&#x27;,
+        days: &#x27;9, 13, 14 de Agosto&#x27;,
+        time: &#x27;18h30&#x27;,
+        requirements: &#x27;Devem vir acompanhados do c. cidadão&#x27;,
+      },
+      {
+        address: &#x27;R. Dona Maria II 17, Seixal&#x27;,
+        age_group: &#x27;Infantis 2005-2006&#x27;,
+        days: &#x27;6, 7, 10 de Agosto&#x27;,
+        time: &#x27;18h00&#x27;,
+        requirements: &#x27;Devem vir acompanhados do c. cidadão&#x27;,
+      }
+    ],
+    followers: [&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;10&#x27;, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;10&#x27;, &#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;, &#x27;9&#x27;, &#x27;10&#x27;],
+    &quot;_id&quot;: &quot;5b69b1adf5accc36e448a750&quot;,
+    &quot;acronym&quot;: &quot;FC Porto&quot;,
+    &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+    &quot;full_name&quot;: &quot;&quot;,
+    &quot;name&quot;: &quot;FC Porto&quot;,
+    &quot;current_season&quot;: {
+      &quot;external_ids&quot;: {
+        &quot;zerozero&quot;: &quot;9&quot;
+      },
+      &quot;standings&quot;: [
+        {
+          &quot;position&quot;: 1,
+          &quot;matches&quot;: 17,
+          &quot;wins&quot;: 16,
+          &quot;draws&quot;: 1,
+          &quot;losses&quot;: 0,
+          &quot;goals&quot;: 53,
+          &quot;goals_taken&quot;: 10,
+          &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+          &quot;competition_id&quot;: &quot;5b69b1a3f5accc36e448a74d&quot;,
+          &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+          &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;,
+          &quot;_id&quot;: &quot;5b69b1adf5accc36e448a752&quot;
+        }
+      ],
+      &quot;matches&quot;: [
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 4
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b7f5accc36e448a795&quot;,
+            &quot;name&quot;: &quot;Estoril Praia&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/1734_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b42bf5accc36e448b6cf&quot;,
+          &quot;date&quot;: &quot;2017-08-09T18:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b42bf5accc36e448b6d1&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b6f5accc36e448a789&quot;,
+            &quot;name&quot;: &quot;Moreirense&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/6_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b440f5accc36e448bbdb&quot;,
+          &quot;date&quot;: &quot;2017-08-20T17:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b440f5accc36e448bbdd&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b1f5accc36e448a765&quot;,
+            &quot;name&quot;: &quot;Chaves&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/20_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b457f5accc36e448c0e7&quot;,
+          &quot;date&quot;: &quot;2017-09-09T19:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b457f5accc36e448c0e9&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 5
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b3f5accc36e448a775&quot;,
+            &quot;name&quot;: &quot;Portimonense&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/33_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;id&quot;: &quot;5b69b464f5accc36e448c50e&quot;,
+          &quot;date&quot;: &quot;2017-09-22T19:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b464f5accc36e448c510&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 6
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b7f5accc36e448a791&quot;,
+            &quot;name&quot;: &quot;Paços Ferreira&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/13_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b47ff5accc36e448cb49&quot;,
+          &quot;date&quot;: &quot;2017-10-21T19:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b47ff5accc36e448cb4b&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b4f5accc36e448a77d&quot;,
+            &quot;name&quot;: &quot;Belenenses&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/3_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b49bf5accc36e448d0ed&quot;,
+          &quot;date&quot;: &quot;2017-11-04T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b49cf5accc36e448d0ef&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a755&quot;,
+            &quot;name&quot;: &quot;Benfica&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/4_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b4abf5accc36e448d561&quot;,
+          &quot;date&quot;: &quot;2017-12-01T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4acf5accc36e448d563&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b2f5accc36e448a769&quot;,
+            &quot;name&quot;: &quot;Marítimo&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/12_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b4cff5accc36e448dccd&quot;,
+          &quot;date&quot;: &quot;2017-12-18T21:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4cff5accc36e448dccf&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 4
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b3f5accc36e448a771&quot;,
+            &quot;name&quot;: &quot;V. Guimarães&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/18_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;id&quot;: &quot;5b69b4e4f5accc36e448e0f5&quot;,
+          &quot;date&quot;: &quot;2018-01-07T20:15:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4e4f5accc36e448e0f7&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b4f5accc36e448a779&quot;,
+            &quot;name&quot;: &quot;Tondela&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/4336_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b4f3f5accc36e448e51d&quot;,
+          &quot;date&quot;: &quot;2018-01-19T21:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b4f3f5accc36e448e51f&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b0f5accc36e448a75d&quot;,
+            &quot;name&quot;: &quot;Braga&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/15_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b509f5accc36e448ea73&quot;,
+          &quot;date&quot;: &quot;2018-02-03T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b509f5accc36e448ea75&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 5
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b1f5accc36e448a761&quot;,
+            &quot;name&quot;: &quot;Rio Ave&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/31_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b525f5accc36e448f147&quot;,
+          &quot;date&quot;: &quot;2018-02-18T18:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b525f5accc36e448f149&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b0f5accc36e448a759&quot;,
+            &quot;name&quot;: &quot;Sporting&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/16_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b537f5accc36e448f531&quot;,
+          &quot;date&quot;: &quot;2018-03-02T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b538f5accc36e448f533&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b2f5accc36e448a76d&quot;,
+            &quot;name&quot;: &quot;Boavista&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/5_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b558f5accc36e448fbb7&quot;,
+          &quot;date&quot;: &quot;2018-03-17T20:30:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b558f5accc36e448fbb9&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 3
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b5f5accc36e448a781&quot;,
+            &quot;name&quot;: &quot;Desp. Aves&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/7_imgbank.png&quot;,
+            &quot;goals&quot;: 0
+          },
+          &quot;id&quot;: &quot;5b69b576f5accc36e44901a3&quot;,
+          &quot;date&quot;: &quot;2018-04-08T17:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b576f5accc36e44901a5&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 5
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b5f5accc36e448a785&quot;,
+            &quot;name&quot;: &quot;V. Setúbal&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/35_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b598f5accc36e4490793&quot;,
+          &quot;date&quot;: &quot;2018-04-23T19:00:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b598f5accc36e4490795&quot;
+        },
+        {
+          &quot;competition_season&quot;: {
+            &quot;id&quot;: &quot;5b69b1a8f5accc36e448a74f&quot;,
+            &quot;name&quot;: &quot;Liga NOS 2017/18&quot;,
+            &quot;avatar&quot;: &quot;http://www.zerozero.pt/img/logos/edicoes/70079_imgbank_.png&quot;
+          },
+          &quot;home_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+            &quot;name&quot;: &quot;FC Porto&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+            &quot;goals&quot;: 2
+          },
+          &quot;away_team&quot;: {
+            &quot;id&quot;: &quot;5b69b1b6f5accc36e448a78d&quot;,
+            &quot;name&quot;: &quot;Feirense&quot;,
+            &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/1728_imgbank.png&quot;,
+            &quot;goals&quot;: 1
+          },
+          &quot;id&quot;: &quot;5b69b5aef5accc36e4490c9f&quot;,
+          &quot;date&quot;: &quot;2018-05-06T19:15:00.000Z&quot;,
+          &quot;_id&quot;: &quot;5b69b5aef5accc36e4490ca1&quot;
+        }
+      ],
+      &quot;players&quot;: [
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1b8f5accc36e448a799&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1b8f5accc36e448a798&quot;,
+          &quot;name&quot;: &quot;Iker Casillas Fernández&quot;,
+          &quot;number&quot;: &quot;1&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/03/1003_20180803164212_iker_casillas.png&quot;,
+          &quot;nationality&quot;: &quot;Espanha&quot;,
+          &quot;_id&quot;: &quot;5b69b1b8f5accc36e448a79a&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1b9f5accc36e448a79e&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1b9f5accc36e448a79d&quot;,
+          &quot;name&quot;: &quot;José Pedro Malheiro de Sá&quot;,
+          &quot;number&quot;: &quot;12&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/60/164860_20180803164215_jose_sa.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1b9f5accc36e448a79f&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1b9f5accc36e448a7a3&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1b9f5accc36e448a7a2&quot;,
+          &quot;name&quot;: &quot;João Paulo Santos da Costa&quot;,
+          &quot;number&quot;: &quot;24&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/94/160894_20180526125001_joao_costa.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1b9f5accc36e448a7a4&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1baf5accc36e448a7a8&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1baf5accc36e448a7a7&quot;,
+          &quot;name&quot;: &quot;Vanailson Luciano de Souza Alves&quot;,
+          &quot;number&quot;: &quot;26&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/28/241528_20180803164216_vana_alves.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1baf5accc36e448a7a9&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Guarda Redes&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1baf5accc36e448a7ad&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1baf5accc36e448a7ac&quot;,
+          &quot;name&quot;: &quot;Fabiano Ribeiro de Freitas&quot;,
+          &quot;number&quot;: &quot;40&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/51/39151_20180803164218_fabiano.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1baf5accc36e448a7ae&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bbf5accc36e448a7b2&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bbf5accc36e448a7b1&quot;,
+          &quot;name&quot;: &quot;Luís Rafael Soares Alves&quot;,
+          &quot;number&quot;: &quot;-&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/18/105518_20180731180922_rafa_soares.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1bbf5accc36e448a7b3&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bbf5accc36e448a7b7&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bbf5accc36e448a7b6&quot;,
+          &quot;name&quot;: &quot;Victorio Maximiliano Pereira Páez&quot;,
+          &quot;number&quot;: &quot;2&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/64/34664_20180803164414_maxi_pereira.png&quot;,
+          &quot;nationality&quot;: &quot;Uruguai&quot;,
+          &quot;_id&quot;: &quot;5b69b1bbf5accc36e448a7b8&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bcf5accc36e448a7bc&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bcf5accc36e448a7bb&quot;,
+          &quot;name&quot;: &quot;Yordán Hernando Osorio Paredes&quot;,
+          &quot;number&quot;: &quot;4&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/35/404035_20180731182037_yordan_osorio.png&quot;,
+          &quot;nationality&quot;: &quot;Venezuela&quot;,
+          &quot;_id&quot;: &quot;5b69b1bcf5accc36e448a7bd&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bcf5accc36e448a7c1&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bcf5accc36e448a7c0&quot;,
+          &quot;name&quot;: &quot;Iván Marcano Sierra&quot;,
+          &quot;number&quot;: &quot;5&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/73/36773_20180613195208_ivan_marcano.jpg&quot;,
+          &quot;nationality&quot;: &quot;Espanha&quot;,
+          &quot;_id&quot;: &quot;5b69b1bdf5accc36e448a7c2&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bdf5accc36e448a7c6&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bdf5accc36e448a7c5&quot;,
+          &quot;name&quot;: &quot;Alex Nicolao Telles&quot;,
+          &quot;number&quot;: &quot;13&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/39/176439_20180803164419_alex_telles.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1bdf5accc36e448a7c7&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;,
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bef5accc36e448a7cb&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bef5accc36e448a7ca&quot;,
+          &quot;name&quot;: &quot;Miguel Arturo Layún Prado&quot;,
+          &quot;number&quot;: &quot;19&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/51/106851_20180614125648_miguel_layun.jpg&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1bef5accc36e448a7cc&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bef5accc36e448a7d0&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bef5accc36e448a7cf&quot;,
+          &quot;name&quot;: &quot;Ricardo Domingos Barbosa Pereira&quot;,
+          &quot;number&quot;: &quot;21&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/79/56579_20180613112949_ricardo_pereira.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1bef5accc36e448a7d1&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;,
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bff5accc36e448a7d5&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bff5accc36e448a7d4&quot;,
+          &quot;name&quot;: &quot;Diego Antonio Reyes Rosales&quot;,
+          &quot;number&quot;: &quot;23&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/17/163617_20180613195452_diego_reyes.png&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1bff5accc36e448a7d6&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1bff5accc36e448a7da&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1bff5accc36e448a7d9&quot;,
+          &quot;name&quot;: &quot;Felipe Augusto de Almeida Monteiro &quot;,
+          &quot;number&quot;: &quot;28&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/45/176145_20180803164427_felipe.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1bff5accc36e448a7db&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Direito)&quot;,
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c0f5accc36e448a7df&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c0f5accc36e448a7de&quot;,
+          &quot;name&quot;: &quot;José Diogo Dalot Teixeira&quot;,
+          &quot;number&quot;: &quot;30&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/16/284416_20180606144230_diogo_dalot.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1c0f5accc36e448a7e0&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Central)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c0f5accc36e448a7e4&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c0f5accc36e448a7e3&quot;,
+          &quot;name&quot;: &quot;Jorge Filipe Oliveira Fernandes&quot;,
+          &quot;number&quot;: &quot;44&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/41/216241_20180622172526_jorge_fernandes.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1c0f5accc36e448a7e5&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Defesa (Defesa Esquerdo)&quot;,
+            &quot;Médio (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c1f5accc36e448a7e9&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c1f5accc36e448a7e8&quot;,
+          &quot;name&quot;: &quot;Luís Carlos Machado Mata&quot;,
+          &quot;number&quot;: &quot;55&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/33/216233_20180519110525_luis_mata.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1c1f5accc36e448a7ea&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c2f5accc36e448a7ee&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c2f5accc36e448a7ed&quot;,
+          &quot;name&quot;: &quot;Paulo Henrique Soares dos Santos&quot;,
+          &quot;number&quot;: &quot;6&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/39/240739_20180608202049_paulinho.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1c2f5accc36e448a7ef&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c3f5accc36e448a7f3&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c3f5accc36e448a7f2&quot;,
+          &quot;name&quot;: &quot;Óliver Torres Muñoz&quot;,
+          &quot;number&quot;: &quot;10&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/81/260081_20180803164624_oliver_torres.png&quot;,
+          &quot;nationality&quot;: &quot;Espanha&quot;,
+          &quot;_id&quot;: &quot;5b69b1c3f5accc36e448a7f4&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Centro)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1c4f5accc36e448a7f8&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1c4f5accc36e448a7f7&quot;,
+          &quot;name&quot;: &quot;Héctor Miguel Herrera López &quot;,
+          &quot;number&quot;: &quot;16&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/35/211935_20180803164626_hector_herrera.png&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1c4f5accc36e448a7f9&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Centro)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cbf5accc36e448a7fd&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cbf5accc36e448a7fc&quot;,
+          &quot;name&quot;: &quot;André Filipe Brás André&quot;,
+          &quot;number&quot;: &quot;20&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/73/31173_20180731183335_andre_andre.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cbf5accc36e448a7fe&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cbf5accc36e448a802&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cbf5accc36e448a801&quot;,
+          &quot;name&quot;: &quot;Danilo Luís Hélio Pereira&quot;,
+          &quot;number&quot;: &quot;22&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/22/74722_20180803164627_danilo_pereira.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cbf5accc36e448a803&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1ccf5accc36e448a807&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1ccf5accc36e448a806&quot;,
+          &quot;name&quot;: &quot;Otávio Edmilson da Silva Monteiro&quot;,
+          &quot;number&quot;: &quot;25&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/60/276060_20180803164629_otavio.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1ccf5accc36e448a808&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1ccf5accc36e448a80c&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1ccf5accc36e448a80b&quot;,
+          &quot;name&quot;: &quot;Sérgio Miguel Relvas de Oliveira&quot;,
+          &quot;number&quot;: &quot;27&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/43/74743_20180803164631_sergio_oliveira.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1ccf5accc36e448a80d&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cdf5accc36e448a811&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cdf5accc36e448a810&quot;,
+          &quot;name&quot;: &quot;Luiz Gustavo Novaes Palhares&quot;,
+          &quot;number&quot;: &quot;50&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/66/547866_20180519110715_luizao.jpg&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1cdf5accc36e448a812&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Defensivo)&quot;,
+            &quot;Defesa (Defesa Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cdf5accc36e448a816&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cdf5accc36e448a815&quot;,
+          &quot;name&quot;: &quot;Rui Filipe Araújo Moreira&quot;,
+          &quot;number&quot;: &quot;60&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/62/96062_20180519110802_rui_moreira.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cdf5accc36e448a817&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Ofensivo)&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cef5accc36e448a81b&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cdf5accc36e448a81a&quot;,
+          &quot;name&quot;: &quot;Federico Nicolás Varela&quot;,
+          &quot;number&quot;: &quot;68&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/67/446667_20180730135436_fede_varela.jpg&quot;,
+          &quot;nationality&quot;: &quot;Argentina&quot;,
+          &quot;_id&quot;: &quot;5b69b1cef5accc36e448a81c&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Direito)&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cef5accc36e448a820&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cef5accc36e448a81f&quot;,
+          &quot;name&quot;: &quot;Hernâni Jorge Santos Fortes&quot;,
+          &quot;number&quot;: &quot;7&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/04/159904_20180803164856_hernani.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1cef5accc36e448a821&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Esquerdo)&quot;,
+            &quot;Médio (Médio Ofensivo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1cff5accc36e448a825&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cff5accc36e448a824&quot;,
+          &quot;name&quot;: &quot;Yacine Nasr Eddine Brahimi&quot;,
+          &quot;number&quot;: &quot;8&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/07/64507_20180803164856_yacine_brahimi.png&quot;,
+          &quot;nationality&quot;: &quot;Argélia&quot;,
+          &quot;_id&quot;: &quot;5b69b1cff5accc36e448a826&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d0f5accc36e448a82a&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1cff5accc36e448a829&quot;,
+          &quot;name&quot;: &quot;Vincent Aboubakar&quot;,
+          &quot;number&quot;: &quot;9&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/45/141345_20180803164856_vincent_aboubakar.png&quot;,
+          &quot;nationality&quot;: &quot;Camarões&quot;,
+          &quot;_id&quot;: &quot;5b69b1d0f5accc36e448a82b&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d0f5accc36e448a82f&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d0f5accc36e448a82e&quot;,
+          &quot;name&quot;: &quot;Moussa Marega&quot;,
+          &quot;number&quot;: &quot;11&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/01/280401_20180803164859_moussa_marega.png&quot;,
+          &quot;nationality&quot;: &quot;Mali&quot;,
+          &quot;_id&quot;: &quot;5b69b1d0f5accc36e448a830&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d1f5accc36e448a834&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d1f5accc36e448a833&quot;,
+          &quot;name&quot;: &quot;Gonçalo Mendes Paciência&quot;,
+          &quot;number&quot;: &quot;14&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/94/74894_20180712133107_goncalo_paciencia.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d1f5accc36e448a835&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Direito)&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d1f5accc36e448a839&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d1f5accc36e448a838&quot;,
+          &quot;name&quot;: &quot;Jesús Manuel Corona Ruíz&quot;,
+          &quot;number&quot;: &quot;17&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/94/155294_20180803164904_jesus_corona.png&quot;,
+          &quot;nationality&quot;: &quot;México&quot;,
+          &quot;_id&quot;: &quot;5b69b1d2f5accc36e448a83a&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado&quot;,
+            &quot;Avançado (Extremo Esquerdo)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d2f5accc36e448a83e&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d2f5accc36e448a83d&quot;,
+          &quot;name&quot;: &quot;Abdul Majeed Waris&quot;,
+          &quot;number&quot;: &quot;18&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/97/134497_20180608202118_majeed_waris.png&quot;,
+          &quot;nationality&quot;: &quot;Gana&quot;,
+          &quot;_id&quot;: &quot;5b69b1d2f5accc36e448a83f&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d2f5accc36e448a843&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d2f5accc36e448a842&quot;,
+          &quot;name&quot;: &quot;Francisco das Chagas Soares dos Santos&quot;,
+          &quot;number&quot;: &quot;29&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/70/137670_20180803164909_soares.png&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1d2f5accc36e448a844&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d3f5accc36e448a848&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d3f5accc36e448a847&quot;,
+          &quot;name&quot;: &quot;Rui Pedro da Silva e Sousa&quot;,
+          &quot;number&quot;: &quot;33&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/35/284035_20180603014314_rui_pedro.jpg&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d3f5accc36e448a849&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Médio (Médio Centro)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d3f5accc36e448a84d&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d3f5accc36e448a84c&quot;,
+          &quot;name&quot;: &quot;Bruno Xavier Almeida Costa&quot;,
+          &quot;number&quot;: &quot;87&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/11/284011_20180803164623_bruno_costa.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d4f5accc36e448a84e&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Extremo Esquerdo)&quot;,
+            &quot;Avançado (Extremo Direito)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d4f5accc36e448a852&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d4f5accc36e448a851&quot;,
+          &quot;name&quot;: &quot;Wenderson Rodrigues do Nascimento Galeno&quot;,
+          &quot;number&quot;: &quot;90&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/90/505790_20180725200454_wenderson_galeno.jpg&quot;,
+          &quot;nationality&quot;: &quot;Brasil&quot;,
+          &quot;_id&quot;: &quot;5b69b1d4f5accc36e448a853&quot;
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          &quot;positions&quot;: [
+            &quot;Avançado (Ponta de Lança)&quot;
+          ],
+          &quot;id&quot;: &quot;5b69b1d5f5accc36e448a857&quot;,
+          &quot;user_info_id&quot;: &quot;5b69b1d5f5accc36e448a856&quot;,
+          &quot;name&quot;: &quot;André Filipe Ferreira Coelho Pereira&quot;,
+          &quot;number&quot;: &quot;95&quot;,
+          &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/jogadores/15/217215_20180803164908_andre_pereira.png&quot;,
+          &quot;nationality&quot;: &quot;Portugal&quot;,
+          &quot;_id&quot;: &quot;5b69b1d5f5accc36e448a858&quot;
+        }
+      ],
+      &quot;staff&quot;: [
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;5&#x27;,
+          user_info_id: &#x27;5&#x27;,
+          name: &#x27;José Mourinho&#x27;,
+          avatar: &#x27;https://cdn.images.dailystar.co.uk/dynamic/58/photos/763000/620x/Jose-Mourinho-644644.jpg&#x27;,
+          position: &#x27;Treinador principal&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;6&#x27;,
+          user_info_id: &#x27;6&#x27;,
+          name: &#x27;Jorge Jesus&#x27;,
+          avatar: &#x27;https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Jorge_Jesus.jpg/1200px-Jorge_Jesus.jpg&#x27;,
+          position: &#x27;Treinador adjunto&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;4&#x27;,
+          user_info_id: &#x27;4&#x27;,
+          name: &#x27;Vital de Carvalho&#x27;,
+          avatar: &#x27;https://openminds.swissre.com/static//images/profile-default.png&#x27;,
+          position: &#x27;Treinador adjunto&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+        {
+          &quot;age&quot;: 23,
+          &quot;date_of_birth&quot;: &quot;&quot;,
+          id: &#x27;3&#x27;,
+          user_info_id: &#x27;3&#x27;,
+          name: &#x27;Nuno Carmo&#x27;,
+          avatar: &#x27;https://scontent.fopo3-1.fna.fbcdn.net/v/t31.0-8/15541052_10212069863200855_2889012374229061166_o.jpg?_nc_cat&#x3D;0&amp;oh&#x3D;5b128be1ebf4151ec5aa2afb671b72d0&amp;oe&#x3D;5B8C9375&#x27;,
+          position: &#x27;Preparador físico&#x27;,
+          nationality: &#x27;Portugal&#x27;,
+        },
+      ],
+      &quot;media&quot;: [
+        {
+          title: &#x27;Arnaldo Tema marca Hat-trick em jogo decisivo&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;08-05-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 53,
+          shares: 8,
+          likes: 20,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;2&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Arnaldo faz 25 anos!&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;27-08-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 1200,
+          shares: 12,
+          likes: 0,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci.&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Melhores momentos&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;08-09-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 93,
+          shares: 45,
+          likes: 90,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;15 Golos em 10 jogos.&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;03-11-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 200,
+          shares: 12,
+          likes: 20,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Campeão da Supermacia&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;08-02-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 2,
+          shares: 0,
+          likes: 0,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+        {
+          title: &#x27;Diogo falha final da Taça de Portugal&#x27;,
+          author: &#x27;A Bola.&#x27;,
+          date: &#x27;28-05-2018&#x27;,
+          image: &#x27;https://static.noticiasaominuto.com/stockimages/1920/naom_5ac4042fdc0c4.jpg?1522795787&#x27;,
+          ref: &#x27;//www.youtube.com/embed/8Z0sbekoQL4&#x27;,
+          views: 40,
+          shares: 40,
+          likes: 13,
+          text: &#x27;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, lectus non maximus varius, nibh orci rutrum velit, rhoncus vehicula sapien quam efficitur orci&#x27;,
+          references: {
+            leagues: [
+              {
+                name: &#x27;Liga Portugal&#x27;,
+                id: &#x27;1&#x27;,
+              }
+            ],
+            team: [{
+              name: &#x27;Seixal FC&#x27;,
+              id: &#x27;1&#x27;
+            }],
+            player: [{
+              name: &#x27;Arnaldo Tema&#x27;,
+              id: &#x27;1&#x27;
+            }],
+          }
+        },
+
+      ],
+      &quot;_id&quot;: &quot;5b69b1adf5accc36e448a751&quot;,
+      &quot;season_id&quot;: &quot;5b69b1a8f5accc36e448a74e&quot;,
+      &quot;avatar&quot;: &quot;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&quot;,
+      &quot;name&quot;: &quot;FC Porto&quot;,
+      &quot;team_id&quot;: &quot;5b69b1adf5accc36e448a750&quot;
+    }
+  }];
+  mockSearchTeams: SearchEntityViewmodel[] &#x3D; [
+    {
+      personal_info: {
+        name: &#x27;FC Porto&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1adf5accc36e448a750&#x27;,
+        acronym: &#x27;FCP&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/9_imgbank.png&#x27;,
+        name: &#x27;FC Porto&#x27;,
+        full_name: &#x27;FC Porto&#x27;
+      },
+      _id: &#x27;5b69b1adf5accc36e448a750&#x27;,
+      user_info_id: &#x27;5b69b1adf5accc36e448a750&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Benfica&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/4_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1adf5accc36e448a754&#x27;,
+        acronym: &#x27;SLB&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/4_imgbank.png&#x27;,
+        name: &#x27;Benfica&#x27;,
+        full_name: &#x27;Benfica&#x27;
+      },
+      _id: &#x27;5b69b1adf5accc36e448a754&#x27;,
+      user_info_id: &#x27;5b69b1adf5accc36e448a754&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Sporting&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/16_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1b0f5accc36e448a758&#x27;,
+        acronym: &#x27;SFC&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/16_imgbank.png&#x27;,
+        name: &#x27;Sporting&#x27;,
+        full_name: &#x27;Sporting&#x27;
+      },
+      _id: &#x27;5b69b1b0f5accc36e448a758&#x27;,
+      user_info_id: &#x27;5b69b1b0f5accc36e448a758&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Braga&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/15_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1b0f5accc36e448a75c&#x27;,
+        acronym: &#x27;SCB&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/15_imgbank.png&#x27;,
+        name: &#x27;Braga&#x27;,
+        full_name: &#x27;Braga&#x27;
+      },
+      _id: &#x27;5b69b1b0f5accc36e448a75c&#x27;,
+      user_info_id: &#x27;5b69b1b0f5accc36e448a75c&#x27;,
+      type: &#x27;teams&#x27;,
+    },
+    {
+      personal_info: {
+        name: &#x27;Rio Ave&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/31_imgbank.png&#x27;,
+      },
+      team: {
+        id: &#x27;5b69b1b1f5accc36e448a760&#x27;,
+        acronym: &#x27;RAFC&#x27;,
+        avatar: &#x27;https://www.zerozero.pt/img/logos/equipas/31_imgbank.png&#x27;,
+        name: &#x27;Rio Ave&#x27;,
+        full_name: &#x27;Rio Ave&#x27;
+      },
+      user_info_id: &#x27;5b69b1b1f5accc36e448a760&#x27;,
+      _id: &#x27;5b69b1b1f5accc36e448a760&#x27;,
+      type: &#x27;teams&#x27;,
+    }
+  ];
+  requestOptions;
+
+  constructor(private http: HttpClient) {
+    this.requestOptions &#x3D; {
+      headers: new HttpHeaders({
+        &#x27;Content-Type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;
+      })
+    };
+  }
+
+  getTeam(id: string): Observable&lt;TeamViewModel&gt; {
+
+    if (!id || id &#x3D;&#x3D; &quot;-1&quot;) {
+      return of(this.mockTeams[0]);
+    }
+
+    else {
+      return this.http.get&lt;TeamViewModel&gt;(&#x27;/teams/&#x27; + id, this.requestOptions)
+        .pipe(
+          tap(data &#x3D;&gt; {
+            console.log(&#x27;GET Team&#x27;, data);
+          }),
+
+          catchError(this.handleError)
+        );
+    }
+  };
+
+  createRecommendation(id: string, recommendation: Recommendation): Observable&lt;Recommendation&gt; {
+    this.mockTeams[id].recommendations.top_5.push(recommendation);
+    return of(recommendation);
+  };
+
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      console.error(&#x27;An error occurred:&#x27;, error.error.message);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      console.error(
+        &#x60;Backend returned code ${error.status}, &#x60; +
+        &#x60;body was: ${error.error}&#x60;);
+    }
+    // return an ErrorObservable with a user-facing error message
+    return new ErrorObservable(
+      &#x27;Something bad happened; please try again later.&#x27;);
+  };
+
+  getTeamsByLeague(league: string) {
+    return of(this.mockSearchTeams);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TeamService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
